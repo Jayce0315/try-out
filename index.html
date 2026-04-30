@@ -283,6 +283,301 @@
     .btn-continue:not(:disabled):hover { background: var(--accent-hover); }
     .btn-continue:not(:disabled):active { transform: scale(0.98); }
 
+    /* ── Learning Path & Lesson shared header ── */
+    .page-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .page-header-text { flex: 1; min-width: 0; }
+    .page-header-text h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .page-header-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .page-body {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* ── Learning Path ── */
+    .path-intro { margin-bottom: 1.5rem; }
+    .path-intro h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+    .path-intro p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .progress-overall {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.95rem 1.1rem;
+    }
+    .progress-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.55rem;
+    }
+    .progress-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .progress-pct {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .progress-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+
+    .area {
+      margin-top: 1.75rem;
+    }
+    .area-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .area-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+    .area-progress {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .area-bar {
+      height: 4px;
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 0.85rem;
+    }
+    .area-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .topic-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .topic-card {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--bg);
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      transition: border-color 0.15s, background 0.15s, transform 0.1s;
+    }
+    .topic-card:hover {
+      border-color: #b5cfc8;
+      background: var(--surface);
+    }
+    .topic-card:active { transform: scale(0.99); }
+
+    .topic-status {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+    .topic-card.done .topic-status {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+    .topic-status svg {
+      color: #fff;
+      display: none;
+    }
+    .topic-card.done .topic-status svg { display: block; }
+
+    .topic-title {
+      flex: 1;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+    .topic-card.done .topic-title {
+      color: var(--text-secondary);
+    }
+
+    .topic-arrow {
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* ── Lesson screen ── */
+    .lesson-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+    .lesson-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .lesson-section {
+      margin-bottom: 1.75rem;
+    }
+    .lesson-section h4 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.6rem;
+    }
+    .lesson-section p {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    .why-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.1rem;
+      border-radius: 6px;
+    }
+    .why-box p { color: var(--text-primary); font-size: 0.92rem; }
+
+    .content-area {
+      padding: 1.25rem;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .takeaways {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .takeaways li {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+    .takeaways li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .lesson-footer {
+      padding: 1.25rem 1.5rem 2rem;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-complete {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn-complete:hover { background: var(--accent-hover); }
+    .btn-complete:active { transform: scale(0.99); }
+    .btn-complete.done {
+      background: var(--surface);
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+    }
+    .btn-complete.done:hover { background: var(--accent-light); }
+
     /* ── Responsive ── */
     @media (min-width: 600px) {
       h1.brand { font-size: 3rem; }
@@ -290,6 +585,10 @@
       .arch-header { padding: 1.75rem 2rem 1.5rem; }
       .arch-body { padding: 2rem 2rem 1rem; }
       .arch-footer { padding: 1rem 2rem 2.5rem; }
+      .page-header { padding: 1.5rem 2rem; }
+      .page-body { padding: 2rem; }
+      .lesson-title { font-size: 2rem; }
+      .lesson-footer { padding: 1.5rem 2rem 2.5rem; }
     }
   </style>
 </head>
@@ -387,13 +686,164 @@
     </div>
   </div>
 
+  <!-- Learning Path -->
+  <div id="screen-path" class="screen">
+    <div class="page-header">
+      <button class="back-btn" onclick="showArchetypes()" aria-label="Back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <div class="page-header-text">
+        <h2 id="path-archetype-name">Your Learning Path</h2>
+        <p>Personalized for your work</p>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="path-intro">
+        <h3>Your Learning Path</h3>
+        <p>Skills and topics tailored to what you actually need. Tap any topic to start.</p>
+      </div>
+
+      <div class="progress-overall">
+        <div class="progress-row">
+          <span class="progress-label">Overall Progress</span>
+          <span class="progress-pct" id="overall-pct">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="overall-fill"></div>
+        </div>
+      </div>
+
+      <div id="areas-container"></div>
+    </div>
+  </div>
+
+  <!-- Lesson -->
+  <div id="screen-lesson" class="screen">
+    <div class="page-header">
+      <button class="back-btn" onclick="showPath()" aria-label="Back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <div class="page-header-text">
+        <h2 id="lesson-area-name">Lesson</h2>
+        <p>Back to learning path</p>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="lesson-eyebrow" id="lesson-eyebrow">Topic</div>
+      <h1 class="lesson-title" id="lesson-title">Lesson Title</h1>
+
+      <div class="lesson-section">
+        <h4>Why this matters</h4>
+        <div class="why-box">
+          <p id="lesson-why">This lesson connects directly to a real challenge you'll face in your business. Understanding it now saves time, money, and hard lessons later.</p>
+        </div>
+      </div>
+
+      <div class="lesson-section">
+        <h4>Content</h4>
+        <div class="content-area" id="lesson-content">Lesson content coming soon</div>
+      </div>
+
+      <div class="lesson-section">
+        <h4>Key Takeaways</h4>
+        <ul class="takeaways" id="lesson-takeaways">
+          <li>Detailed takeaways will appear here once the lesson content is published.</li>
+          <li>Each lesson will end with 3–5 practical points you can act on this week.</li>
+          <li>Mark this lesson complete to track your progress.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-footer">
+      <button class="btn-complete" id="btn-complete" onclick="toggleComplete()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        <span id="btn-complete-label">Mark as Complete</span>
+      </button>
+    </div>
+  </div>
+
   <script>
     const STORAGE_KEY = 'careerpath_archetype';
+    const COMPLETED_KEY = 'careerpath_completed';
+
+    const ARCHETYPE_NAMES = {
+      'local-business': 'Small / Local Business Owner',
+      'tech-startup': 'Tech Startup Founder',
+      'freelancer': 'Freelancer / Solopreneur',
+      'ecommerce': 'E-commerce Seller',
+      'creator': 'Content Creator / Digital Business'
+    };
+
+    const CURRICULUM = {
+      'local-business': [
+        {
+          id: 'location',
+          title: 'Finding & Securing a Location',
+          topics: [
+            { id: 'foot-traffic',  title: 'Evaluating foot traffic and visibility' },
+            { id: 'lease-terms',   title: 'Understanding commercial lease terms' },
+            { id: 'rent-negotiation', title: 'Rent negotiation tactics' },
+            { id: 'zoning',        title: 'Local zoning and licensing requirements' }
+          ]
+        },
+        {
+          id: 'money',
+          title: 'Managing Money',
+          topics: [
+            { id: 'bookkeeping', title: 'Basic bookkeeping and cash flow tracking' },
+            { id: 'pricing',     title: 'Pricing your products/services for profit' },
+            { id: 'expenses',    title: 'Managing expenses and cutting waste' },
+            { id: 'taxes',       title: 'Understanding taxes for small businesses' }
+          ]
+        },
+        {
+          id: 'customers',
+          title: 'Getting and Keeping Customers',
+          topics: [
+            { id: 'crm',         title: 'CRM fundamentals' },
+            { id: 'complaints',  title: 'Handling complaints and building loyalty' },
+            { id: 'feedback',    title: 'Collecting and using customer feedback' },
+            { id: 'local-marketing', title: 'Local marketing on a small budget' }
+          ]
+        },
+        {
+          id: 'people',
+          title: 'Hiring and Managing People',
+          topics: [
+            { id: 'first-hire',  title: 'Hiring your first employee' },
+            { id: 'expectations', title: 'Setting expectations and giving feedback' },
+            { id: 'scheduling',  title: 'Basic scheduling and delegation' },
+            { id: 'when-to-hire', title: 'When to hire vs do it yourself' }
+          ]
+        },
+        {
+          id: 'operations',
+          title: 'Inventory and Operations',
+          topics: [
+            { id: 'stock',       title: 'Stock management basics' },
+            { id: 'suppliers',   title: 'Supplier relationships and negotiation' },
+            { id: 'checklists',  title: 'Daily operations checklists' },
+            { id: 'seasonal',    title: 'Handling seasonal demand changes' }
+          ]
+        }
+      ]
+    };
+
     let selectedId = null;
+    let currentLesson = null; // { areaId, topicId }
 
     function showScreen(id) {
       document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+      window.scrollTo(0, 0);
     }
 
     function showLanding() { showScreen('screen-landing'); }
@@ -424,8 +874,140 @@
 
     function handleContinue() {
       if (!selectedId) return;
-      // Placeholder — content screens come later
-      alert(`Path selected: ${selectedId}\n\nContent screens coming soon.`);
+      showPath();
+    }
+
+    /* ── Progress tracking ── */
+    function getCompleted() {
+      try {
+        return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '{}');
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveCompleted(map) {
+      localStorage.setItem(COMPLETED_KEY, JSON.stringify(map));
+    }
+
+    function topicKey(archetype, areaId, topicId) {
+      return `${archetype}::${areaId}::${topicId}`;
+    }
+
+    function isComplete(archetype, areaId, topicId) {
+      return !!getCompleted()[topicKey(archetype, areaId, topicId)];
+    }
+
+    function setComplete(archetype, areaId, topicId, value) {
+      const map = getCompleted();
+      const key = topicKey(archetype, areaId, topicId);
+      if (value) map[key] = true;
+      else delete map[key];
+      saveCompleted(map);
+    }
+
+    /* ── Learning Path render ── */
+    function showPath() {
+      if (!selectedId) selectedId = localStorage.getItem(STORAGE_KEY);
+      if (!selectedId || !CURRICULUM[selectedId]) {
+        showArchetypes();
+        return;
+      }
+      renderPath();
+      showScreen('screen-path');
+    }
+
+    function renderPath() {
+      const archetype = selectedId;
+      const areas = CURRICULUM[archetype];
+      document.getElementById('path-archetype-name').textContent = ARCHETYPE_NAMES[archetype] || 'Your Learning Path';
+
+      const container = document.getElementById('areas-container');
+      container.innerHTML = '';
+
+      let totalTopics = 0;
+      let totalDone = 0;
+
+      areas.forEach(area => {
+        const areaDone = area.topics.filter(t => isComplete(archetype, area.id, t.id)).length;
+        const areaTotal = area.topics.length;
+        const areaPct = Math.round((areaDone / areaTotal) * 100);
+        totalTopics += areaTotal;
+        totalDone += areaDone;
+
+        const areaEl = document.createElement('section');
+        areaEl.className = 'area';
+        areaEl.innerHTML = `
+          <div class="area-header">
+            <div class="area-title">${area.title}</div>
+            <div class="area-progress">${areaDone}/${areaTotal} · ${areaPct}%</div>
+          </div>
+          <div class="area-bar"><div class="area-fill" style="width:${areaPct}%"></div></div>
+          <div class="topic-list"></div>
+        `;
+        const list = areaEl.querySelector('.topic-list');
+
+        area.topics.forEach(topic => {
+          const done = isComplete(archetype, area.id, topic.id);
+          const card = document.createElement('button');
+          card.className = 'topic-card' + (done ? ' done' : '');
+          card.innerHTML = `
+            <div class="topic-status">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="topic-title">${topic.title}</div>
+            <svg class="topic-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          `;
+          card.addEventListener('click', () => openLesson(area.id, topic.id));
+          list.appendChild(card);
+        });
+
+        container.appendChild(areaEl);
+      });
+
+      const overallPct = totalTopics ? Math.round((totalDone / totalTopics) * 100) : 0;
+      document.getElementById('overall-pct').textContent = overallPct + '%';
+      document.getElementById('overall-fill').style.width = overallPct + '%';
+    }
+
+    /* ── Lesson render ── */
+    function openLesson(areaId, topicId) {
+      const area = CURRICULUM[selectedId].find(a => a.id === areaId);
+      const topic = area.topics.find(t => t.id === topicId);
+      currentLesson = { areaId, topicId };
+
+      document.getElementById('lesson-eyebrow').textContent = area.title;
+      document.getElementById('lesson-area-name').textContent = area.title;
+      document.getElementById('lesson-title').textContent = topic.title;
+      document.getElementById('lesson-content').textContent = 'Lesson content coming soon';
+
+      updateCompleteButton();
+      showScreen('screen-lesson');
+    }
+
+    function updateCompleteButton() {
+      if (!currentLesson) return;
+      const done = isComplete(selectedId, currentLesson.areaId, currentLesson.topicId);
+      const btn = document.getElementById('btn-complete');
+      const label = document.getElementById('btn-complete-label');
+      if (done) {
+        btn.classList.add('done');
+        label.textContent = 'Completed — tap to undo';
+      } else {
+        btn.classList.remove('done');
+        label.textContent = 'Mark as Complete';
+      }
+    }
+
+    function toggleComplete() {
+      if (!currentLesson) return;
+      const done = isComplete(selectedId, currentLesson.areaId, currentLesson.topicId);
+      setComplete(selectedId, currentLesson.areaId, currentLesson.topicId, !done);
+      updateCompleteButton();
     }
 
     // Restore on load in case user refreshes on archetypes screen
