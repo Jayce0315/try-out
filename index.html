@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerPath</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f8f8f6;
+      --border: #e4e4e0;
+      --text-primary: #1a1a18;
+      --text-secondary: #6b6b66;
+      --text-muted: #9e9e99;
+      --accent: #3d6b5e;
+      --accent-light: #eaf2ef;
+      --accent-hover: #2e5247;
+      --selected-border: #3d6b5e;
+      --selected-bg: #eaf2ef;
+      --radius: 10px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.04);
+      --shadow-hover: 0 2px 8px rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.07);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Screen system ── */
+    .screen {
+      display: none;
+      min-height: 100vh;
+      animation: fadeIn 0.25s ease;
+    }
+    .screen.active { display: flex; flex-direction: column; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Landing screen ── */
+    #screen-landing {
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .landing-inner {
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: var(--accent);
+      border-radius: 14px;
+      margin-bottom: 1.75rem;
+    }
+    .logo-mark svg { color: #fff; }
+
+    h1.brand {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+      letter-spacing: 0.01em;
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-primary:active { transform: scale(0.97); }
+
+    .landing-footnote {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Archetype screen ── */
+    #screen-archetypes {
+      padding: 0;
+    }
+
+    .arch-header {
+      padding: 1.5rem 1.5rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: none;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: background 0.12s, color 0.12s;
+      flex-shrink: 0;
+    }
+    .back-btn:hover { background: var(--surface); color: var(--text-primary); }
+
+    .arch-header-text h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .arch-header-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .arch-body {
+      padding: 1.5rem;
+      flex: 1;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .arch-intro {
+      margin-bottom: 1.25rem;
+    }
+    .arch-intro h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+    }
+    .arch-intro p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .arch-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.25rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg);
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s, box-shadow 0.15s, transform 0.1s;
+      text-align: left;
+      width: 100%;
+    }
+    .arch-card:hover {
+      border-color: #b5cfc8;
+      box-shadow: var(--shadow-hover);
+    }
+    .arch-card:active { transform: scale(0.99); }
+
+    .arch-card.selected {
+      border-color: var(--selected-border);
+      background: var(--selected-bg);
+    }
+
+    .card-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .arch-card.selected .card-icon {
+      background: #d0e7e1;
+    }
+
+    .card-text { flex: 1; min-width: 0; }
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .card-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .card-check {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .arch-card.selected .card-check {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+    .card-check-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      display: none;
+    }
+    .arch-card.selected .card-check-dot { display: block; }
+
+    .arch-footer {
+      padding: 1.25rem 1.5rem 2rem;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .btn-continue {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s, opacity 0.15s;
+      letter-spacing: 0.01em;
+    }
+    .btn-continue:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .btn-continue:not(:disabled):hover { background: var(--accent-hover); }
+    .btn-continue:not(:disabled):active { transform: scale(0.98); }
+
+    /* ── Responsive ── */
+    @media (min-width: 600px) {
+      h1.brand { font-size: 3rem; }
+      .tagline { font-size: 1.15rem; }
+      .arch-header { padding: 1.75rem 2rem 1.5rem; }
+      .arch-body { padding: 2rem 2rem 1rem; }
+      .arch-footer { padding: 1rem 2rem 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Landing -->
+  <div id="screen-landing" class="screen active">
+    <div class="landing-inner">
+      <div class="logo-mark">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <h1 class="brand">CareerPath</h1>
+      <p class="tagline">Learn only what your career actually needs</p>
+      <button class="btn-primary" onclick="showArchetypes()">Get Started</button>
+      <p class="landing-footnote">Pick your path &mdash; takes 30 seconds</p>
+    </div>
+  </div>
+
+  <!-- Archetype Selection -->
+  <div id="screen-archetypes" class="screen">
+    <div class="arch-header">
+      <button class="back-btn" onclick="showLanding()" aria-label="Back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <div class="arch-header-text">
+        <h2>CareerPath</h2>
+        <p>Personalized learning paths</p>
+      </div>
+    </div>
+
+    <div class="arch-body">
+      <div class="arch-intro">
+        <h3>What describes you best?</h3>
+        <p>We'll tailor your learning path to what actually matters for your work.</p>
+      </div>
+
+      <div class="card-list" id="card-list">
+
+        <button class="arch-card" data-id="local-business" onclick="selectCard(this)">
+          <div class="card-icon">🏪</div>
+          <div class="card-text">
+            <div class="card-title">Small / Local Business Owner</div>
+            <div class="card-desc">Restaurant, retail shop, or service business</div>
+          </div>
+          <div class="card-check"><div class="card-check-dot"></div></div>
+        </button>
+
+        <button class="arch-card" data-id="tech-startup" onclick="selectCard(this)">
+          <div class="card-icon">🚀</div>
+          <div class="card-text">
+            <div class="card-title">Tech Startup Founder</div>
+            <div class="card-desc">Building a software product or tech-enabled service</div>
+          </div>
+          <div class="card-check"><div class="card-check-dot"></div></div>
+        </button>
+
+        <button class="arch-card" data-id="freelancer" onclick="selectCard(this)">
+          <div class="card-icon">💼</div>
+          <div class="card-text">
+            <div class="card-title">Freelancer / Solopreneur</div>
+            <div class="card-desc">Selling a skill like design, writing, or consulting</div>
+          </div>
+          <div class="card-check"><div class="card-check-dot"></div></div>
+        </button>
+
+        <button class="arch-card" data-id="ecommerce" onclick="selectCard(this)">
+          <div class="card-icon">🛒</div>
+          <div class="card-text">
+            <div class="card-title">E-commerce Seller</div>
+            <div class="card-desc">Selling on Shopee, Lazada, or your own storefront</div>
+          </div>
+          <div class="card-check"><div class="card-check-dot"></div></div>
+        </button>
+
+        <button class="arch-card" data-id="creator" onclick="selectCard(this)">
+          <div class="card-icon">🎬</div>
+          <div class="card-text">
+            <div class="card-title">Content Creator / Digital Business</div>
+            <div class="card-desc">Monetizing an audience on YouTube, TikTok, or blogs</div>
+          </div>
+          <div class="card-check"><div class="card-check-dot"></div></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="arch-footer">
+      <button class="btn-continue" id="btn-continue" disabled onclick="handleContinue()">
+        Continue
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'careerpath_archetype';
+    let selectedId = null;
+
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function showLanding() { showScreen('screen-landing'); }
+
+    function showArchetypes() {
+      restoreSelection();
+      showScreen('screen-archetypes');
+    }
+
+    function selectCard(card) {
+      document.querySelectorAll('.arch-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedId = card.dataset.id;
+      localStorage.setItem(STORAGE_KEY, selectedId);
+      document.getElementById('btn-continue').disabled = false;
+    }
+
+    function restoreSelection() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return;
+      const card = document.querySelector(`.arch-card[data-id="${saved}"]`);
+      if (card) {
+        card.classList.add('selected');
+        selectedId = saved;
+        document.getElementById('btn-continue').disabled = false;
+      }
+    }
+
+    function handleContinue() {
+      if (!selectedId) return;
+      // Placeholder — content screens come later
+      alert(`Path selected: ${selectedId}\n\nContent screens coming soon.`);
+    }
+
+    // Restore on load in case user refreshes on archetypes screen
+    restoreSelection();
+  </script>
+</body>
+</html>
