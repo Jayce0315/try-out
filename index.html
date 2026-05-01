@@ -1174,10 +1174,74 @@
           id: 'validation',
           title: 'Validating Your Idea',
           topics: [
-            { id: 'problem-solution', title: 'Problem-solution fit' },
-            { id: 'customer-discovery', title: 'Customer discovery' },
-            { id: 'market-sizing', title: 'Market sizing' },
-            { id: 'competitive-analysis', title: 'Competitive analysis' }
+            {
+              id: 'problem-solution',
+              title: 'Problem-solution fit',
+              why: 'Most startups fail not because they couldn\'t build the product, but because they built something people didn\'t want badly enough to pay for. Problem-solution fit is the question you must answer before writing a single line of code.',
+              content: [
+                'Problem-solution fit exists when you have identified a real, recurring problem that a specific group of people experience — and your proposed solution resolves it in a way they couldn\'t easily achieve before. The key word is real. A problem is real when people are actively losing time or money because of it, have tried to solve it already with workarounds, and can describe it unprompted in specific terms. Vague frustration is not a problem worth building around.',
+                'The fastest way to test fit is to find 10 people who match your target user and ask them about the problem — not about your solution. Describe the situation you think they\'re in and ask: how often does this happen, what do you currently do about it, and how much does the workaround cost you in time or money? If people struggle to recall examples or say it\'s not really a big deal, the problem may not be painful enough to justify a product.',
+                'Separate the problem from your proposed solution early. Founders routinely fall in love with their solution and then search backwards for a problem to justify it. The signal you\'re doing this is when you find yourself explaining the product before the customer has confirmed the problem. Keep those two conversations distinct until you\'re confident the problem is genuinely felt.',
+                'A strong signal of real problem-solution fit is when people ask to be notified when you launch, offer to pay you upfront, or describe the problem with visible emotion. A weak signal is when they say \'that sounds useful\' or \'I could see that being helpful\' — those responses are polite, not predictive. Train yourself to hear the difference.',
+                'Document what you learn from each conversation verbatim, not summarised. Exact quotes from real users are far more valuable than your paraphrase of what you thought they meant. They reveal the language your customers use to describe their own problem — language that will be more effective in your marketing than anything you\'d write yourself.'
+              ],
+              takeaways: [
+                'Talk to 10 target users about the problem before building anything — ask about their experience, not your solution.',
+                'Listen for specific past examples and workarounds, not hypothetical interest; those are the only reliable signals of a real problem.',
+                'Document exact quotes, not summaries — the words customers use to describe their problem are your future marketing copy.'
+              ]
+            },
+            {
+              id: 'customer-discovery',
+              title: 'Customer discovery',
+              why: 'Customer discovery is the process of testing your assumptions about who has the problem, how badly they have it, and what they\'d pay to fix it — before you\'ve spent months building. Skipping it is the single most expensive mistake early-stage founders make.',
+              content: [
+                'Start by writing down every assumption your business depends on being true. Who is the customer? What is their problem? How often does it occur? What do they currently do instead? What would they pay? How do they find new tools? Each of these is a hypothesis, not a fact. Customer discovery is the process of stress-testing each one against reality before you build around it.',
+                'The best customer discovery interviews follow a pattern: start with their life and workflow, not your product. Ask about the last time they experienced the problem, what they did, what it cost them, and what an ideal outcome would look like. Avoid leading questions — \'would you use a tool that did X?\' tells you nothing, because people reflexively say yes to hypotheticals. Ask about past behaviour, not future intention.',
+                'Talk to people you don\'t know. Friends and family will encourage you. Existing network contacts will be polite. Neither group will give you an honest signal. You need strangers who match your target user profile and have no reason to spare your feelings. Find them through LinkedIn, industry communities, Reddit threads, or simply by reaching out cold to people whose job titles match your target.',
+                'Aim for 20–30 discovery interviews before drawing any conclusions. Patterns emerge across conversations, not within them. After 5 interviews you\'ll have noise. After 20 you\'ll have signal. Track which assumptions are being confirmed, which are being challenged, and which you hadn\'t thought to test. A pivot at this stage costs a few weeks. A pivot after 6 months of building costs everything.',
+                'Customer discovery never fully stops. It is most intensive before you build, but the discipline of talking to users regularly — monthly at minimum — is what separates founders who stay aligned with the market from those who drift into building what they personally find interesting.'
+              ],
+              takeaways: [
+                'Write down every assumption your business depends on being true, then design interviews specifically to test the riskiest ones first.',
+                'Talk to at least 20 strangers who match your target user before drawing conclusions — friends and warm contacts give you encouragement, not signal.',
+                'Ask about past behaviour and specific incidents, never about hypothetical future use — \'would you use this\' tells you nothing reliable.'
+              ]
+            },
+            {
+              id: 'market-sizing',
+              title: 'Market sizing',
+              why: 'Market size determines whether your business can grow into something worth building. A technically excellent product in a market too small to matter will never return the effort you put into it — and investors will tell you this before they\'ll tell you anything else.',
+              content: [
+                'Use the TAM–SAM–SOM framework to structure your thinking. TAM is your Total Addressable Market — everyone who could conceivably benefit from your solution. SAM is your Serviceable Addressable Market — the portion you can realistically reach given your geography, language, distribution, and go-to-market approach. SOM is your Serviceable Obtainable Market — what you could realistically capture in the next 3–5 years. Investors care most about SAM and SOM. TAM is context; SOM is the plan.',
+                'Build your market size estimate from the bottom up, not from a top-down analyst report. Bottom-up means: how many target customers exist, multiplied by what each would pay annually. If you\'re targeting mid-sized logistics companies in Southeast Asia, estimate the number of companies that match your profile, multiply by your expected contract value, and that\'s your SAM. It\'s more credible than citing a "$12 billion logistics software market" from a Gartner report.',
+                'Be honest about market size constraints early. Some problems are real but affect too few people who pay too little to build a scalable business around. A tool for a very specific workflow used by 2,000 people who\'d each pay $10 a month is a $240,000 annual market — not a venture-backed startup. That\'s a fine freelance product but a poor fit for an equity-financed business. Know which you\'re building.',
+                'Markets can be created, not just captured. If your product enables a behaviour that didn\'t previously exist, top-down market data won\'t reflect your real opportunity. In these cases, size the market by analogy: find the closest existing market and estimate how your product expands or replaces it. Uber didn\'t size the taxi market; they sized the \'getting from A to B\' market.',
+                'Update your market sizing as you learn. Early estimates are educated guesses. As you complete customer discovery and understand who actually buys, how much they spend, and how often they churn, your model should get more precise. A founder who can explain why their market size estimate changed — and why the updated number is more accurate — is far more credible than one who presents a static slide.'
+              ],
+              takeaways: [
+                'Build your market size from the bottom up: number of target customers multiplied by expected annual contract value — not from a research report headline.',
+                'Be clear which of TAM, SAM, and SOM you\'re presenting and why — investors focus on SAM and SOM, not the total theoretical ceiling.',
+                'If your realistic SOM doesn\'t support a large business, make that call now rather than after 18 months of building.'
+              ]
+            },
+            {
+              id: 'competitive-analysis',
+              title: 'Competitive analysis',
+              why: '\'No competition\' is almost never true and always a red flag — either the market doesn\'t exist yet or you haven\'t looked hard enough. Understanding the competitive landscape tells you how to position, where to differentiate, and what it will actually take to win.',
+              content: [
+                'Map competitors across four categories: direct competitors (same problem, same solution), indirect competitors (same problem, different approach), substitutes (what customers do today instead of using any product), and the status quo (doing nothing or using spreadsheets). Most founders only look at the first category and miss the most important insight — what are customers currently doing, and why haven\'t they already switched to something better?',
+                'For each competitor, document: their pricing, their target customer segment, their primary value proposition, their most common customer complaints (check G2, Capterra, Trustpilot, and Reddit), and how long they\'ve been in the market. Customer complaints on review sites are a direct map of the gaps your product could fill. This research takes an afternoon and is among the highest-value work you can do before building.',
+                'Identify your specific differentiator — not just what you do differently, but why that difference matters to a defined customer. \'Faster\', \'cheaper\', and \'easier to use\' are not differentiators unless you can quantify them and explain why competitors haven\'t closed the gap. A real differentiator is one where, if a customer asked a competitor to match it, they couldn\'t or wouldn\'t.',
+                'Be honest about what competitors do better than you. The founders who lose to competition are rarely the ones who studied it carefully. They\'re the ones who dismissed it. Acknowledging a competitor\'s strengths and articulating why your chosen customers still prefer you is a far stronger position than pretending alternatives don\'t exist.',
+                'Treat your competitive analysis as a living document you update quarterly. Competitors ship, pivot, raise money, and enter new segments. The landscape you mapped at founding will look different in 18 months. The founders who stay current on competition make better product decisions — because they know which gaps to fill before a competitor does.'
+              ],
+              takeaways: [
+                'Map competitors across all four categories — direct, indirect, substitutes, and status quo — before concluding you understand the landscape.',
+                'Read competitor reviews on G2, Capterra, or Reddit; customer complaints are a direct map of the gaps your product could fill.',
+                'Document one honest answer to: what does each major competitor do better than us, and which customers should choose them instead of us?'
+              ]
+            }
           ]
         },
         {
