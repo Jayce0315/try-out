@@ -1992,10 +1992,74 @@
           id: 'unit-econ',
           title: 'Making Money Not Just Revenue',
           topics: [
-            { id: 'unit-economics', title: 'Unit economics' },
-            { id: 'marketplace-pricing', title: 'Marketplace pricing' },
-            { id: 'free-shipping-trap', title: 'The free shipping trap' },
-            { id: 'break-even', title: 'Break-even analysis' }
+            {
+              id: 'unit-economics',
+              title: 'Unit economics',
+              why: 'Revenue is vanity; profit is sanity. Many e-commerce sellers are busy, have strong sales numbers, and are losing money on every order without knowing it because they have never calculated what a single sale actually costs them end to end.',
+              content: [
+                'Unit economics for an e-commerce seller means knowing the exact profit or loss on a single unit sold, after every cost is accounted for. The formula is: selling price minus cost of goods (your landed cost per unit) minus platform commission minus payment processing fee minus packaging materials minus shipping to customer minus returns provision. Work through each line for your product. Most sellers who do this for the first time discover their real margin is 30–50% lower than they assumed.',
+                'Platform commissions vary significantly by category and are non-negotiable. On Shopee and Lazada, transaction fees typically range from 1–5% of the sale price depending on the category, payment method, and any promotional programmes you participate in. Read the fee schedule for your specific category before pricing. A product priced assuming a 2% commission in a category that charges 4% is losing 2% of revenue on every sale — which sounds small until you multiply it by hundreds of orders.',
+                'Returns are a cost most sellers ignore in their unit economics until returns start happening at scale. Build a returns provision into every unit calculation: if your category has a 5% return rate and processing a return costs you the original shipping plus re-inspection, restocking or disposal, and the lost sale, that cost should be expressed as a per-unit figure across all sales. A 5% return rate with a $8 return processing cost adds $0.40 to your cost per unit sold.',
+                'Calculate your contribution margin — the amount each unit contributes toward fixed costs and profit after all variable costs are paid. If your selling price is $30 and your total variable costs per unit are $22, your contribution margin is $8, or 27%. This number tells you how much of each sale is available to cover fixed costs (storage fees, software subscriptions, your time) and generate profit. A contribution margin below 20% is very tight for most e-commerce models; below 15% is difficult to sustain.',
+                'Review your unit economics every time anything changes: when you reorder at a different price, when a platform changes its fee structure, when shipping rates increase, or when you run a promotion that lowers your average selling price. Unit economics are not static — they shift with every variable. A product that was profitable six months ago at the same price may no longer be if shipping costs have risen and platform fees have changed.'
+              ],
+              takeaways: [
+                'Calculate profit per unit sold after every cost — landed cost, platform commission, payment fee, packaging, shipping, and a returns provision — before listing any product.',
+                'Look up the exact fee schedule for your product category on each platform; commission rates vary by category and promotional programme.',
+                'Set a minimum contribution margin threshold (20–25% is a reasonable starting point) and decline to list any product that can\'t meet it at the market price.'
+              ]
+            },
+            {
+              id: 'marketplace-pricing',
+              title: 'Marketplace pricing',
+              why: 'Price too high and you lose the algorithm and the sale; price too low and you win orders you\'re losing money on. Marketplace pricing is a calculated balance between competitiveness and profitability that most sellers set once and never revisit.',
+              content: [
+                'On Shopee and Lazada, price is one of the key signals the platform algorithm uses to rank listings in search results. Listings priced significantly above the market median for a given keyword are ranked lower, even if other quality signals are strong. This creates downward pressure on prices that is structural, not incidental. The practical implication: you cannot ignore competitor pricing and rank well. You need to know the price distribution in your category and position deliberately within it.',
+                'Research the full price distribution, not just the cheapest listing. Look at the 10 best-selling listings in your category and map out their prices. Identify the bottom 20% (budget tier), the middle 60% (mainstream), and the top 20% (premium). Decide which tier you are competing in based on your product quality, branding, and margin requirements. Competing in the budget tier with budget margins is a race to zero. Competing in the premium tier requires genuine differentiation — better quality, better content, or a brand story that justifies the gap.',
+                'Factor in promotions when setting your base price. Shopee and Lazada regularly pressure sellers to participate in flash sales, platform-wide discount days, and voucher programmes that require you to offer 10–30% off your listed price. If your base price is already at your minimum margin, participating in these promotions means selling at a loss. Most high-volume sellers set their base price 15–20% above their minimum acceptable price, treating that buffer as the promotion fund that keeps them competitive without going underwater.',
+                'Bundle products strategically to increase average order value without directly cutting the unit price. Selling a main product with a complementary accessory as a bundle at a price slightly below the sum of the parts protects your per-unit economics on the hero product while providing perceived value. Bundles also reduce direct price comparison — a buyer comparing your bundle to a competitor\'s single unit is not making an apples-to-apples comparison, which reduces the pressure to match the lowest price.',
+                'Review and adjust your pricing monthly rather than setting it and forgetting it. Check whether new competitors have entered the category, whether your bestseller\'s rank has changed, and whether your sell-through rate is faster or slower than the previous month. A sell-through rate that is too fast may indicate underpricing; one that is too slow may indicate overpricing, poor listing quality, or both. Price is one lever — changing it should always be considered alongside listing quality and ad spend.'
+              ],
+              takeaways: [
+                'Map the price distribution of the top 10 sellers in your category and decide which tier you\'re competing in before setting any price.',
+                'Set your base price 15–20% above your minimum acceptable margin to create a promotion buffer for flash sales and discount days.',
+                'Review pricing monthly against sell-through rate and ranking position — both are signals that your price needs adjusting.'
+              ]
+            },
+            {
+              id: 'free-shipping-trap',
+              title: 'The free shipping trap',
+              why: 'Free shipping is one of the most effective conversion drivers in e-commerce — and one of the most effective ways to silently destroy your margin if you absorb the cost without adjusting your pricing to compensate.',
+              content: [
+                'Free shipping is never actually free — the cost is either absorbed by the seller, built into the product price, or subsidised by the platform. When a platform like Shopee runs a free shipping promotion, it typically subsidises part of the cost for sellers who opt in, but the subsidy is capped and the rules change frequently. Understanding exactly what you are and are not subsidising on any given order is essential before you opt into any free shipping programme.',
+                'Calculate the real shipping cost for a typical order in your category before deciding whether to offer free shipping. Include the courier fee, any packaging costs specific to shipping (bubble wrap, void fill, box upgrade), and the time cost of packing. In many categories, shipping a single low-value item costs $2–5 in actual fees plus materials. On a $15 product, that is 13–33% of your revenue. On a $40 product, it is 5–12%. The unit economics of free shipping vary enormously by product price point.',
+                'The minimum order threshold is the standard mechanism for making free shipping economically viable. If your average shipping cost is $4 and your average margin per item is $6, a free shipping threshold set at two items means the shipping cost is covered by the incremental margin on the second item. Setting the threshold at a level that makes the shipping cost roughly margin-neutral is the goal. Test different thresholds and measure whether average order value increases enough to cover the cost.',
+                'Conditional free shipping — free on orders above a threshold, paid below — is more margin-protective than blanket free shipping and often performs nearly as well in conversion because it incentivises buyers to add items to reach the threshold. The key is setting the threshold close enough to the average order value that buyers are motivated to add one more item, but not so high that it feels unattainable. A threshold 20–30% above your current average order value is a common starting point.',
+                'Track the cost of free shipping as a line item in your monthly accounts, not as an invisible reduction in margin. If you do not see it explicitly, you cannot manage it. Some sellers discover that their free shipping costs are running at 8–10% of revenue — which on a 25% gross margin business means free shipping alone is consuming a third of their gross profit. Visibility is the first step to making an informed decision about whether to continue, adjust, or discontinue the programme.'
+              ],
+              takeaways: [
+                'Calculate the real shipping cost per typical order — courier fee plus packaging materials — before offering free shipping on any product.',
+                'Set a minimum order threshold that makes your shipping cost margin-neutral, typically 20–30% above your current average order value.',
+                'Track free shipping costs as an explicit line item each month; if you cannot see it, you cannot manage it.'
+              ]
+            },
+            {
+              id: 'break-even',
+              title: 'Break-even analysis',
+              why: 'Break-even analysis tells you exactly how much you need to sell before you stop losing money. Without it, you are spending on inventory, ads, and platform fees with no clear picture of when the business starts working in your favour.',
+              content: [
+                'Break-even for an e-commerce business has two levels: the product level and the business level. Product-level break-even is how many units you need to sell to recover the cost of your initial inventory order. If you bought 100 units at $10 landed cost each ($1,000 total) and your contribution margin per unit after all variable costs is $8, you need to sell 125 units to break even on that order — which means you need to sell through more than your initial stock. If your margin were $12 per unit instead, you would break even at 84 units, leaving 16 units of pure profit.',
+                'Business-level break-even accounts for your fixed costs: platform subscription fees, storage or warehousing costs, software tools, packaging materials bought in bulk, and any advertising spend you run consistently. Add up all fixed costs per month, divide by your contribution margin per unit, and that is the number of units you need to sell every month before you make a single dollar of profit. If your fixed costs are $500/month and your contribution margin is $8/unit, you need to sell 63 units per month before you break even at the business level.',
+                'Include advertising spend in your break-even calculation, not as an optional extra. Many sellers run ads hoping to find profitable traffic and treat ad spend as separate from their core economics. It is not — it is a cost of generating sales that directly affects your profitability. A product with a $10 contribution margin that costs $8 in ads to sell has a $2 true margin. If you pull the ads, the sales disappear. Include your cost per acquisition from ads in your unit economics from the start.',
+                'Model your break-even under different scenarios before launching a product. What happens if your sell-through rate is 30% lower than expected? What happens if the platform raises commission by 1%? What happens if shipping costs increase by $1 per order? A break-even model built in a spreadsheet with variable inputs lets you stress-test assumptions and understand how much cushion you have. A business that breaks even only under optimistic assumptions is more fragile than it appears.',
+                'Use your break-even number as a decision threshold, not just a planning tool. If you have been selling a product for three months and you are consistently below break-even with no clear trend toward it, that is a signal to reassess — reprice, improve the listing, cut ad spend, or exit the product before the losses compound. The worst outcome is selling at a loss for months because you are busy and the sales feel like progress. Revenue without profit is not progress.'
+              ],
+              takeaways: [
+                'Calculate product-level break-even: total inventory cost divided by contribution margin per unit gives you the number of units you must sell to recover your investment.',
+                'Calculate business-level break-even: total monthly fixed costs divided by contribution margin per unit gives you your monthly sales floor.',
+                'Include your average cost per acquisition from ads in your unit economics — a product that only breaks even with ads running is dependent on those ads staying profitable.'
+              ]
+            }
           ]
         },
         {
