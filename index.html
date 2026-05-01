@@ -522,6 +522,20 @@
       font-size: 0.9rem;
       text-align: center;
     }
+    .content-area.has-content {
+      padding: 0;
+      border: none;
+      background: none;
+      color: var(--text-primary);
+      text-align: left;
+    }
+    .content-area.has-content p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+    .content-area.has-content p:last-child { margin-bottom: 0; }
 
     .takeaways {
       list-style: none;
@@ -788,10 +802,74 @@
           id: 'location',
           title: 'Finding & Securing a Location',
           topics: [
-            { id: 'foot-traffic',  title: 'Evaluating foot traffic and visibility' },
-            { id: 'lease-terms',   title: 'Understanding commercial lease terms' },
-            { id: 'rent-negotiation', title: 'Rent negotiation tactics' },
-            { id: 'zoning',        title: 'Local zoning and licensing requirements' }
+            {
+              id: 'foot-traffic',
+              title: 'Evaluating foot traffic and visibility',
+              why: 'Your location sets a hard ceiling on walk-in revenue before you spend a dollar on marketing. Foot traffic is more predictive of a physical business\'s success than any other single factor — more reliable than the landlord\'s pitch or your gut feeling.',
+              content: [
+                'Count foot traffic yourself before signing anything. Post someone outside the space for two-hour blocks on a weekday morning, a weekday lunchtime, and a Saturday afternoon. Count pedestrians who pass the frontage — not cars. Also tally how many glance at the window versus walk past without looking. That ratio tells you how visible and engaging the space actually is.',
+                'Match the demographics you observe to your target customer. A breakfast café needs early commuters; a children\'s toy shop needs weekend families; a gym needs after-work traffic. Raw headcount is meaningless if the people walking by aren\'t your buyer. Schedule your counts to match your planned trading hours, not whenever is convenient.',
+                'Assess visibility from 50 metres in each direction. Can someone see your shopfront and understand what you sell before they reach the door? A curved street, a permanently parked delivery truck, or a bus shelter can halve your effective visibility on a perfectly busy block. Walk the approach from each direction and time exactly how long your sign stays in view.',
+                'Look for nearby traffic anchors: a supermarket, pharmacy, train exit, or school that reliably pushes pedestrians past your door. A spot one block from an anchor is often 20–30% cheaper than right next to it while capturing most of the foot-flow benefit. The best position is in the natural walking path to or from the anchor — not just the same street.',
+                'Return on a rainy Tuesday and a quiet weekday morning. A location that buzzes on sunny Saturdays can be dead mid-week. You\'re buying the average across all trading hours, not the peak. If the space only works on weekends, build your entire business model around weekend revenue before you commit.'
+              ],
+              takeaways: [
+                'Count foot traffic on three different days and time slots before committing — a notebook and two-hour observation windows is all you need.',
+                'Walk the approach from every direction and time exactly how many seconds your sign would be visible to someone passing by.',
+                'Find the nearest anchor tenant and confirm your site is in the path people walk to or from it, not just nearby.'
+              ]
+            },
+            {
+              id: 'lease-terms',
+              title: 'Understanding commercial lease terms',
+              why: 'A commercial lease is typically a 3–5 year obligation worth hundreds of thousands of dollars. Landlords negotiate these every week; most tenants do it once or twice in a lifetime — the information gap is enormous and entirely in the landlord\'s favour.',
+              content: [
+                'Understand gross versus net leases before reading anything else. A gross lease gives you one fixed monthly number and the landlord covers building costs. A net lease — often called triple-net or NNN — means you also pay your share of property taxes, building insurance, and common area maintenance (CAM). CAM charges routinely add 20–40% on top of base rent. Always request a 12-month CAM estimate in writing before negotiating the headline number.',
+                'Find the annual rent escalation clause and model it over the full term. A 5% annual increase sounds small but compounds to 28% higher rent by year five. Push for a fixed cap of 3%, or CPI whichever is lower. This is standard enough that most landlords accept it without friction once base rent is agreed.',
+                'Read the personal guarantee clause carefully — it\'s the highest-risk item most tenants miss. A standard commercial lease makes you personally liable for the full remaining term if the business closes. Negotiate a \'good guy\' clause: if you give 60–90 days\' notice and return the space in good condition, your personal liability ends at handover. Many landlords accept this for tenants they want.',
+                'Check the permitted use clause. It legally defines what business activities you can run from the space. Language like \'women\'s clothing retail only\' means you can\'t pivot to accessories or homewares without renegotiating. Push for broad wording: \'retail and related uses\' or \'food and beverage and related activities.\' The narrower the clause, the more control the landlord retains over your future.',
+                'Confirm your assignment and subletting rights. If you sell the business or need to exit early, can you transfer the lease to a buyer without the landlord blocking it? Without an assignment clause (or \'consent not to be unreasonably withheld\' language), you\'re stuck paying rent on an empty space. This clause is routinely overlooked and extremely painful to be without when you need it.'
+              ],
+              takeaways: [
+                'Always request a written CAM cost estimate before negotiating base rent — it changes the real monthly number significantly.',
+                'Negotiate a \'good guy\' personal guarantee clause so your liability ends when you hand back the keys with proper notice.',
+                'Read the permitted use clause and push for broad language — a narrow definition locks you into a single format for the entire lease term.'
+              ]
+            },
+            {
+              id: 'rent-negotiation',
+              title: 'Rent negotiation tactics',
+              why: 'Asking rent is a starting position, not a final offer. Landlords expect to negotiate — accepting the first number means overpaying every single month for the entire lease term.',
+              content: [
+                'Lead with free rent months rather than a lower monthly rate. A landlord who won\'t drop from $4,000 to $3,500 per month will often give two or three rent-free months for fit-out and ramp-up. Two free months on a $4,000 lease is $8,000 in your pocket — and it doesn\'t permanently lower their rent roll or set a weaker benchmark for your renewal. It\'s a much easier yes for them.',
+                'Ask for a tenant improvement (TI) allowance on every negotiation: a cash contribution toward your fit-out costs. Typical ranges are $20–$80 per square metre depending on market and space condition. Frame it as protecting their asset: \'We\'re investing significantly in improving this space, which raises its quality and lowers your re-leasing risk. We\'d like $X toward construction.\' Landlords who want quality long-term tenants say yes more often than you\'d expect.',
+                'Use vacancy duration as leverage — politely. Research how long the space has been sitting empty. Google Street View\'s historical imagery can show you this without asking anyone. A unit that\'s been vacant for six months is costing the landlord real money every week. The longer it\'s sat, the more motivated they are. You can open with: \'We understand the timing has been challenging — here\'s what makes sense for us to commit long-term.\'',
+                'If the landlord won\'t move on the monthly rate, negotiate other terms: a longer free-rent period, more TI, a lower security deposit, a break clause at year three, or right of first refusal on adjacent space. A lease is a package — the headline rent is one line item. Good negotiations improve overall economics even when the monthly number doesn\'t shift.',
+                'Get everything written into the signed lease, not a side letter or verbal commitment. Promises from a leasing agent don\'t bind the landlord. Free months, TI allowances, and capped escalations that aren\'t in the executed document don\'t exist — especially if the building is sold to a new owner mid-lease.'
+              ],
+              takeaways: [
+                'Open by asking for rent-free months rather than a lower monthly rate — it\'s the easiest concession for a landlord to give.',
+                'Ask for a tenant improvement allowance on every negotiation; at minimum it opens a conversation about who funds the fit-out.',
+                'Research how long the space has been vacant before your first meeting — that number tells you exactly how much leverage you\'re starting with.'
+              ]
+            },
+            {
+              id: 'zoning',
+              title: 'Local zoning and licensing requirements',
+              why: 'Operating without the right permits can mean an immediate closure notice — and you can\'t recover the revenue lost while you scramble to comply. Licensing is non-negotiable, but it\'s entirely predictable if you plan for it before you sign anything.',
+              content: [
+                'Before signing a lease, confirm the space is zoned for your specific business activity. Zoning determines what uses are legally permitted on a site. Call or email your local municipal planning office with the full property address and your intended use: \'Can I operate a [bakery / hair salon / gym] from this address?\' Get the answer in writing. Discovering a zoning problem after signing is an expensive and avoidable mistake.',
+                'Map the licensing layers separately — they come from different agencies with different timelines. Most businesses need at minimum: a general business licence from the council or city, an industry-specific permit if your category requires one, a fire safety clearance, and a signage permit for any external display. Each has its own form, fee, and processing window. Treating them as one thing causes missed steps.',
+                'Food businesses have the most complex and slowest process: kitchen layout approval, food handler certifications for every person who touches food, a health department inspection, and sometimes a separate permit for outdoor seating or alcohol. Start this process at least 12 weeks before your intended opening date. Signing a lease and assuming permits will follow is a common and expensive miscalculation.',
+                'Check signage rules before commissioning any design. Many commercial zones restrict sign dimensions, lighting type (no flashing or animated elements), total facade coverage, and placement height. A sign fabricated without council approval can mean a removal order and the full cost wasted. Get the local signage code from the council planning department before briefing a sign maker.',
+                'Build a licensing checklist working backward from your target opening. List every permit, the issuing agency, the expected processing time, and the cost. Note dependencies — some applications can\'t be lodged until a prior approval is in hand. A 30-minute spreadsheet now can prevent a six-week delay that pushes your opening past your lease start date.'
+              ],
+              takeaways: [
+                'Confirm zoning for your specific business type before signing a lease — ask by email so you have a written record.',
+                'Map every required permit by agency and processing time, working backward from your planned opening date.',
+                'Start food-related permit applications at least 12 weeks before opening — they involve inspections and certifications that cannot be rushed.'
+              ]
+            }
           ]
         },
         {
@@ -1191,7 +1269,25 @@
       document.getElementById('lesson-eyebrow').textContent = area.title;
       document.getElementById('lesson-area-name').textContent = area.title;
       document.getElementById('lesson-title').textContent = topic.title;
-      document.getElementById('lesson-content').textContent = 'Lesson content coming soon';
+
+      const whyEl = document.getElementById('lesson-why');
+      whyEl.textContent = topic.why || 'This lesson connects directly to a real challenge you'll face in your business.';
+
+      const contentEl = document.getElementById('lesson-content');
+      if (topic.content && topic.content.length) {
+        contentEl.className = 'content-area has-content';
+        contentEl.innerHTML = topic.content.map(p => `<p>${p}</p>`).join('');
+      } else {
+        contentEl.className = 'content-area';
+        contentEl.textContent = 'Lesson content coming soon';
+      }
+
+      const takeawaysEl = document.getElementById('lesson-takeaways');
+      if (topic.takeaways && topic.takeaways.length) {
+        takeawaysEl.innerHTML = topic.takeaways.map(t => `<li>${t}</li>`).join('');
+      } else {
+        takeawaysEl.innerHTML = '<li>Detailed takeaways will appear here once the lesson content is published.</li><li>Each lesson will end with 3–5 practical points you can act on this week.</li><li>Mark this lesson complete to track your progress.</li>';
+      }
 
       updateCompleteButton();
       showScreen('screen-lesson');
