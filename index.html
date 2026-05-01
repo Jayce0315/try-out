@@ -1248,10 +1248,74 @@
           id: 'product',
           title: 'Building the Product',
           topics: [
-            { id: 'mvp-scope', title: 'Scoping your MVP' },
-            { id: 'tech-feasibility', title: 'Technical feasibility' },
-            { id: 'no-code', title: 'No-code tools' },
-            { id: 'working-devs', title: 'Working with developers' }
+            {
+              id: 'mvp-scope',
+              title: 'Scoping your MVP',
+              why: 'An MVP is not a smaller version of your full product — it is the minimum you need to test your riskiest assumption. Most founders build too much, too early, and discover the wrong thing was built only after months of wasted runway.',
+              content: [
+                'Start by identifying the single riskiest assumption your business depends on. Not the thing you\'re most excited to build — the thing that, if wrong, makes everything else irrelevant. If you\'re building a marketplace, the riskiest assumption might be that suppliers will list inventory, not that buyers will purchase. Your MVP exists to test that specific assumption, not to showcase your full vision.',
+                'Define your MVP by what it must prove, not by what it must include. Write one sentence: "We will know this MVP succeeded if [specific measurable outcome] happens within [timeframe]." Everything a feature doesn\'t contribute to that outcome is scope creep. Features that feel essential but don\'t directly test your core assumption should go on a post-MVP list, not in the first build.',
+                'The classic scoping trap is adding "just one more thing" before launch — a nicer UI, an extra integration, a second user role. Each addition multiplies complexity, extends your timeline, and delays the only feedback that actually matters: whether real users do what you expected with what you built. Ship the uncomfortable version. The discomfort usually means you\'re actually at minimum.',
+                'Use a simple prioritisation grid for every feature under consideration. Columns: does this help prove the core assumption, how long does it take to build, and can it be faked or manually handled instead? Anything in the "long build / doesn\'t test assumption / can be faked" quadrant gets cut. Manually doing something the software will eventually automate is a legitimate MVP strategy — it\'s faster and teaches you more.',
+                'Set a hard deadline for your MVP before you start building. Without a deadline, scope expands to fill available time. A six-week deadline forces you to make ruthless trade-offs. When the deadline arrives, ship what you have and learn from it — don\'t push the deadline to add more features. The learning from an imperfect launch is worth more than the delay required to make it polished.'
+              ],
+              takeaways: [
+                'Write one sentence defining what your MVP must prove and by when — every feature decision flows from that sentence.',
+                'Ask of every proposed feature: does this directly test our riskiest assumption? If not, it goes on the post-MVP list.',
+                'Set a hard build deadline before you start and treat it as fixed — scope should flex, not the date.'
+              ]
+            },
+            {
+              id: 'tech-feasibility',
+              title: 'Technical feasibility',
+              why: 'Founders who don\'t understand technical feasibility either get misled by developers about what things cost, or commit publicly to timelines and capabilities the technology can\'t support. You don\'t need to be a developer — but you need to understand enough to ask the right questions.',
+              content: [
+                'Technical feasibility has three components: can this be built at all with current technology, can it be built at the quality and scale you need, and can it be built within your time and budget constraints? Most startup ideas are feasible in the first sense. The real questions are the second and third — and the answers depend heavily on what you\'re specifically trying to build and with whom.',
+                'Understand the difference between a prototype, an MVP, and a production system. A prototype demonstrates the concept and might take days or weeks. An MVP is functional enough for real users but not optimised for scale or reliability. A production system handles load, has security hardened, has monitoring and error handling, and is maintainable long-term. Each level of maturity costs roughly 3–10x more than the previous one. Most founders budget for a prototype and expect production quality.',
+                'Learn to recognise technical complexity signals before you commit. Features that involve real-time processing, AI model training, complex third-party integrations, payment handling, healthcare or financial data, or offline-first functionality all carry significantly more engineering complexity than they appear to. If you\'re not technical, get an independent technical review of any complex feature before promising it to users or investors.',
+                'Build a technical risk register: a simple list of every technical assumption your product depends on and what happens if one of them turns out to be wrong or much harder than expected. Which APIs might not offer the data access you\'re assuming? Which performance requirements might require expensive infrastructure? Identifying these before you start lets you de-risk the most dangerous ones first, rather than discovering them mid-build.',
+                'If you are non-technical, find a technical advisor — not a co-founder or employee — who will give you honest independent assessments of what vendors, contractors, or employees tell you. Even two hours a month with someone who can translate technical claims into plain language is worth more than most other advisory relationships at this stage.'
+              ],
+              takeaways: [
+                'Distinguish clearly between prototype, MVP, and production quality — and make sure your budget reflects which level you\'re actually building to.',
+                'List every technical assumption your product depends on and validate the riskiest ones before committing to a build timeline.',
+                'If you\'re non-technical, find one technical advisor who will give you honest translations of what developers and vendors tell you.'
+              ]
+            },
+            {
+              id: 'no-code',
+              title: 'No-code tools',
+              why: 'No-code tools let you test real product ideas with real users in days rather than months, without hiring a developer. Used well, they compress the validation cycle dramatically — and many products have been taken to thousands of users and significant revenue entirely without custom code.',
+              content: [
+                'The no-code ecosystem divides roughly into categories: website and landing page builders (Webflow, Framer), app builders (Bubble, Glide, Adalo), workflow automation (Make, Zapier, n8n), databases and internal tools (Airtable, Notion, Retool), forms and surveys (Typeform, Tally), and AI-augmented builders (Cursor, Bolt, v0). Understanding which category your problem falls into is the first step to picking the right tool — most founders try to stretch one tool across multiple categories and hit its limits.',
+                'No-code is best suited for: validating demand before a custom build, building internal tools and dashboards, creating MVPs for marketplace or directory products, automating manual workflows between existing software, and building simple SaaS products with standard CRUD functionality. It is poorly suited for: products requiring complex custom logic, high-volume real-time processing, mobile apps with hardware integrations, or anything where performance at scale is a core requirement from day one.',
+                'Use no-code to test assumptions, not to avoid a technical decision. The question isn\'t "can we build this in Bubble forever?" — it\'s "can we learn enough in Bubble in the next 60 days to justify investing in a custom build?" If the answer is yes, the no-code phase has done its job. Treat it as a learning tool, not a permanent architecture.',
+                'Be realistic about no-code limitations before you hit them. Most platforms have constraints on data volume, customisation depth, performance under load, and the ability to export your data or migrate to a custom stack. Read the platform\'s limitations documentation before building. Hitting a ceiling after you\'ve signed up paying customers is a much harder situation than anticipating it before you start.',
+                'Combine no-code tools with manual operations to fake features that aren\'t built yet. A "smart matching algorithm" can be a human reading a form and sending an email. An "AI analysis report" can be a human writing a document based on inputs. This Wizard of Oz approach lets you test whether users value a feature before you invest in automating it — and consistently reveals which features people actually use versus which ones they said they wanted.'
+              ],
+              takeaways: [
+                'Match the no-code tool to the category of problem — app builder, automation, database, or builder — before defaulting to whatever you\'ve heard of.',
+                'Use no-code explicitly to answer a question within a fixed timeframe, not as a permanent alternative to understanding your technical requirements.',
+                'Combine no-code with manual operations to fake unbuilt features and learn whether users value them before automating anything.'
+              ]
+            },
+            {
+              id: 'working-devs',
+              title: 'Working with developers',
+              why: 'The founder-developer relationship is where most early-stage technical projects break down — not because of bad code, but because of poor communication, misaligned expectations, and specs that mean different things to different people.',
+              content: [
+                'Write specifications in terms of user behaviour, not technical implementation. Instead of "build a database with user authentication," write "a user can create an account with their email, verify it, log in, and reset their password if forgotten." Developers know how to build authentication; they need to know what the user experience must do. Behavioural specs are harder to misinterpret and make acceptance testing straightforward.',
+                'Define done before work starts, not after. For every feature or sprint, agree in writing what "complete" means — what the user can do, what edge cases are handled, and what won\'t be included in this version. Scope creep almost always comes from an unclear definition of done. A developer who delivers what was specified has done their job, even if it\'s not what you imagined. The misalignment is in the spec, not the execution.',
+                'Establish a regular rhythm of check-ins rather than long silences followed by a big reveal. A 30-minute weekly sync where you see working software — not mockups, not status updates, working software — catches misunderstandings while they\'re still cheap to fix. A feature built in the wrong direction for four weeks is far more expensive than one caught after four days.',
+                'Understand the difference between a bug and a change request before raising either. A bug is when the software doesn\'t do what was specified. A change request is when you want something different from what was specified. Both are legitimate, but conflating them creates friction and resentment. If the spec said X and the developer built X, asking them to build Y instead is a change request — treat it as one and expect it to affect scope and timeline.',
+                'If you\'re hiring freelancers or an agency, always check references from a previous client in a similar context — not from their portfolio page. Ask the reference: did they hit their estimates, how did they handle unexpected complexity, and would you hire them again? The answers to those three questions tell you almost everything you need to know before you commit.'
+              ],
+              takeaways: [
+                'Write specs as user behaviours ("a user can do X") not technical instructions — they\'re harder to misinterpret and easier to test against.',
+                'Define "done" in writing for every feature before work begins, including what edge cases are in scope and what is explicitly deferred.',
+                'See working software — not status updates — at least every week; long silences between check-ins produce expensive surprises.'
+              ]
+            }
           ]
         },
         {
