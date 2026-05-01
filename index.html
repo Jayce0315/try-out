@@ -1396,10 +1396,74 @@
           id: 'fundraising',
           title: 'Fundraising and Finance',
           topics: [
-            { id: 'unit-economics', title: 'Unit economics' },
-            { id: 'bootstrap-vs-raise', title: 'Bootstrapping vs raising' },
-            { id: 'pitching', title: 'Pitching investors' },
-            { id: 'projections', title: 'Financial projections' }
+            {
+              id: 'unit-economics',
+              title: 'Unit economics',
+              why: 'Unit economics tell you whether your business makes money at the individual customer level — before scale obscures the answer. A startup that doesn\'t understand its unit economics is building on a foundation it hasn\'t inspected.',
+              content: [
+                'The two numbers that matter most are Customer Acquisition Cost (CAC) and Lifetime Value (LTV). CAC is the total sales and marketing spend divided by the number of new customers acquired in the same period. LTV is the average revenue a customer generates over their entire relationship with you, minus the cost to serve them. The ratio between them — LTV:CAC — tells you whether acquiring customers is a good investment. A ratio below 1:1 means you lose money on every customer. A ratio above 3:1 is generally healthy for a SaaS or subscription business.',
+                'Calculate your payback period: how many months of revenue from a customer it takes to recover the cost of acquiring them. If your CAC is $600 and your monthly gross margin per customer is $50, your payback period is 12 months. The shorter the payback period, the faster you can reinvest that capital in acquiring the next customer. Most investors want to see a payback period under 18 months; under 12 is strong. A 36-month payback period means you need enormous capital reserves to grow.',
+                'Gross margin is the revenue remaining after direct costs of delivering the service — hosting, support, transaction fees, and third-party software costs that scale with usage. For software businesses, gross margins should be 60–80% or higher. A business with 30% gross margins has a cost structure that looks like a services business, not a software one, and will struggle to achieve the kind of growth efficiency investors expect. Know your gross margin and understand what drives it.',
+                'Churn is the percentage of customers or revenue you lose in a given period. For a subscription business, monthly churn of 5% means you\'re losing over half your customer base every year — which requires aggressive new customer acquisition just to stay flat. Track both customer churn (number of accounts lost) and revenue churn (dollar value lost), because they reveal different things. Negative net revenue churn — where expansion revenue from existing customers exceeds losses — is one of the most powerful business model signals that exists.',
+                'Build a unit economics model before you think you need one. The discipline of calculating these numbers forces you to understand your cost structure in detail, surfaces assumptions you didn\'t know you were making, and gives you a framework for evaluating every growth decision. "If we spend $X more on sales, does the LTV of customers acquired that way justify it?" is an answerable question once you have a unit economics model. Without one, it\'s a guess.'
+              ],
+              takeaways: [
+                'Calculate your CAC, LTV, and LTV:CAC ratio this week — if you can\'t, identify exactly which data is missing and make capturing it a priority.',
+                'Calculate your payback period in months; anything over 18 months means your growth will be heavily capital-constrained.',
+                'Track both customer churn and revenue churn separately — the gap between them tells you whether your best customers are staying or leaving.'
+              ]
+            },
+            {
+              id: 'bootstrap-vs-raise',
+              title: 'Bootstrapping vs raising',
+              why: 'The decision to raise external capital or build with your own resources shapes every other decision you make — your timeline, your ownership, your risk profile, and what a successful outcome even looks like. Most founders default to raising without seriously evaluating the alternative.',
+              content: [
+                'Bootstrapping means funding growth from revenue and personal resources, retaining full ownership but constraining the pace of growth to what the business can self-fund. Raising external capital — from angels, VCs, or accelerators — means faster growth potential but diluted ownership, investor expectations, and a path that typically requires either an acquisition or IPO to return capital. These are fundamentally different business models, not just different funding strategies. Be clear which one you\'re choosing and why.',
+                'The case for bootstrapping is strongest when: your market is large but not winner-take-all, your customers will pay before you\'ve delivered (good cash flow timing), your cost to acquire and serve customers is low, and you value control and optionality over maximum growth speed. Many excellent, profitable businesses have been built without outside capital. The bias toward fundraising in startup culture systematically undervalues this path.',
+                'The case for raising capital is strongest when: you\'re in a market where speed to scale creates a durable competitive moat, customer acquisition requires significant upfront spend before payback, you need to hire ahead of revenue, or your technology requires substantial R&D before it can generate commercial returns. If any of these apply and the capital is available on reasonable terms, raising can be the right decision. The key word is reasonable — equity given away early is expensive.',
+                'Understand dilution concretely before signing anything. If you raise $500,000 at a $2 million pre-money valuation, you\'re selling 20% of the company. If you then raise another round at $8 million pre-money and sell another 20%, your original stake has gone from 100% to 80% to 64%. By the time most VC-backed companies reach Series B, founders collectively own 40–60% of what they started with. That is often still a good outcome — but it should be a deliberate choice, not an accidental one.',
+                'Consider the middle paths: revenue-based financing (repaying investors from a percentage of revenue rather than equity), SAFE notes (simple agreements for future equity that delay the valuation conversation), or small angel rounds from strategically useful individuals rather than institutional funds. The funding landscape is broader than "bootstrap or raise a Series A," and many companies find the right structure somewhere in between.'
+              ],
+              takeaways: [
+                'Write down explicitly what a successful outcome looks like for you — then work backward to determine whether bootstrapping or raising is more likely to get you there.',
+                'Model the dilution from your planned raise concretely: what percentage will you own after this round, and after the likely next round?',
+                'Before approaching VCs, talk to at least three founders who bootstrapped a similar business and three who raised — the contrast reveals assumptions you didn\'t know you had.'
+              ]
+            },
+            {
+              id: 'pitching',
+              title: 'Pitching investors',
+              why: 'Fundraising is a sales process — and like any sales process, it rewards preparation, repetition, and understanding what the buyer actually needs to hear. Most first-time founders pitch too early, to the wrong people, with the wrong story.',
+              content: [
+                'Investors make decisions based on three things: the size and quality of the opportunity, their confidence in the team\'s ability to capture it, and the terms. The narrative arc of a strong pitch follows this order: here is a large, real problem; here is why existing solutions fail; here is our insight about how to solve it; here is the evidence that we\'re right; here is the team that can execute; here is what we\'re asking for and what we\'ll do with it. Every slide should serve one of these points — if it doesn\'t, cut it.',
+                'The most important slide is not the product demo or the market size — it is the traction slide. Traction is the evidence that the market wants what you\'re building: revenue, users, retention rates, letters of intent, partnerships, or pilot results. Investors fund momentum, not ideas. If you have no traction yet, be honest about where you are and focus the conversation on the quality of your insight and the strength of your customer discovery rather than projections.',
+                'Know your numbers cold before any investor conversation. CAC, LTV, monthly recurring revenue, growth rate, gross margin, burn rate, runway. If you hesitate on any of these, investors notice — and it signals either that you don\'t understand your business or that the numbers are bad enough that you\'d rather not discuss them. Either interpretation damages credibility. Knowing a bad number is better than not knowing it.',
+                'Fundraising is a process with a funnel. You will pitch many investors before you close one. Track everyone you\'ve approached, their response, and what stage they\'re at. Follow up consistently. Most rounds close on the fifth or sixth interaction, not the first. Investors who say "not right now" or "reach out when you have more traction" are keeping a door open — add them to a periodic update list and send one brief, factual update every 6–8 weeks.',
+                'Choose your investors as carefully as they choose you. An investor who doesn\'t understand your market, expects weekly updates, or panics at the first sign of a difficult quarter will consume more management time and goodwill than the capital is worth. Speak to portfolio founders — not references provided by the VC, but founders you find yourself — and ask what happens when things get hard. That conversation tells you more about an investor than anything else.'
+              ],
+              takeaways: [
+                'Know your CAC, LTV, MRR, growth rate, gross margin, burn, and runway without hesitation before any investor conversation.',
+                'Track every investor interaction in a simple CRM and follow up persistently — most rounds close after 5–6 touchpoints, not one pitch meeting.',
+                'Speak to portfolio founders you find yourself — not the ones the VC suggests — and ask specifically what happens when things go wrong.'
+              ]
+            },
+            {
+              id: 'projections',
+              title: 'Financial projections',
+              why: 'Projections are not predictions — they are structured arguments about how your business will behave under a set of assumptions. The value is not the output; it is the discipline of being forced to make your assumptions explicit and testable.',
+              content: [
+                'Build your projections from the bottom up, not the top down. Top-down projections — "we\'ll capture 1% of a $10 billion market" — are useless because they don\'t reveal the operational logic that would produce that outcome. Bottom-up means: how many sales conversations will we have, at what conversion rate, generating how many customers, paying how much, with what churn. Every line in the model should trace back to a specific operational assumption you can defend.',
+                'The three statements you need are an income statement (revenue minus costs equals profit or loss), a cash flow statement (when money actually arrives and leaves the bank), and a balance sheet (what you own and owe at a point in time). For most early-stage startups, the cash flow statement is the most operationally important — it tells you when you\'ll run out of money, which is the most critical planning variable you have. Build the cash flow model first.',
+                'Scenario planning is more useful than a single projection. Build three versions: a base case (your honest best estimate), a downside case (growth is half of what you expect and costs are 20% higher), and an upside case (what happens if things go well). The downside case is the most important — it tells you how much runway you have if the business doesn\'t perform as hoped, and whether you need to raise more capital or cut costs to survive it. Investors who ask about downside scenarios are doing their job; founders who have thought about it are much more credible.',
+                'Your revenue assumptions are the most dangerous part of the model because they\'re the least grounded in historical data. Anchor them to something observable: conversion rates from your discovery calls, comparable growth rates from similar businesses at your stage, or committed pipeline. A revenue line that assumes 3x growth every quarter with no supporting logic is not a projection — it\'s a wish. Flag your revenue assumptions clearly and explain what would have to be true for them to hold.',
+                'Update your model monthly against actuals. The gap between projection and reality is not a failure — it is information. If you\'re growing faster than projected, understand why so you can replicate it. If you\'re behind, identify which assumption was wrong: lower conversion, higher churn, slower sales cycle, or higher costs than expected. A model that gets updated against reality becomes progressively more accurate. One that sits unchanged in a pitch deck becomes progressively more fictional.'
+              ],
+              takeaways: [
+                'Build revenue projections bottom-up from conversion rates and sales activity — never from a percentage of a market size estimate.',
+                'Build a downside scenario where growth is half your base case and costs run 20% over — that\'s your real runway and it\'s what matters most.',
+                'Update the model against actuals every month and trace every significant variance back to the specific assumption that was wrong.'
+              ]
+            }
           ]
         },
         {
