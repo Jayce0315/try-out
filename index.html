@@ -1322,10 +1322,74 @@
           id: 'tech-literacy',
           title: 'Tech Literacy for Founders',
           topics: [
-            { id: 'how-apps-work', title: 'How apps work' },
-            { id: 'architecture', title: 'Architecture diagrams' },
-            { id: 'evaluating-talent', title: 'Evaluating technical talent' },
-            { id: 'tech-debt', title: 'Technical debt' }
+            {
+              id: 'how-apps-work',
+              title: 'How apps work',
+              why: 'A non-technical founder who understands how software is built makes better product decisions, spots unrealistic promises from developers, and earns the trust of technical co-founders and hires faster than one who treats it as a black box.',
+              content: [
+                'Every web or mobile application has two main parts: the frontend and the backend. The frontend is what users see and interact with — the interface that runs in a browser or on a phone. The backend is the server-side logic and databases that store data, enforce rules, and process requests. When a user submits a form, the frontend sends the data to the backend, which processes it, stores or retrieves information from a database, and sends a response back. Understanding this request-response pattern explains most of what software actually does.',
+                'APIs (Application Programming Interfaces) are how different systems talk to each other. When your app lets users log in with Google, sends an SMS notification, processes a payment, or pulls in a map — those are all API calls to external services. APIs are why you don\'t have to build everything from scratch, but they also introduce dependencies: if the API changes, goes down, or increases its price, your product is affected. Every third-party API in your product is a dependency worth understanding.',
+                'Databases store your product\'s data. There are two main types: relational databases (like PostgreSQL or MySQL) that store structured data in rows and columns with defined relationships, and non-relational databases (like MongoDB or Firebase) that store more flexible, document-style data. The choice matters for how your data is structured, how it can be queried, and how it scales. When developers argue about database choices, this is usually the underlying trade-off they\'re navigating.',
+                'Hosting and infrastructure is where your code actually runs. Historically this meant physical servers; now it almost always means cloud providers — AWS, Google Cloud, or Azure — or simpler platforms like Vercel, Railway, or Heroku. The infrastructure choice affects your cost, performance, reliability, and how easily you can scale. A product running fine for 100 users may need significant infrastructure changes to handle 100,000.',
+                'Security is not a feature you add at the end — it is a series of decisions made throughout the build. Authentication (verifying who a user is), authorisation (controlling what they can do), encrypted data storage, and protection against common attacks like SQL injection and cross-site scripting are all engineering decisions that need to be made deliberately. Ask your developers how each is handled before you go live with user data.'
+              ],
+              takeaways: [
+                'Learn the frontend / backend / database / API model well enough to draw it on a whiteboard — it makes every technical conversation easier.',
+                'List every third-party API your product depends on and understand what happens to your product if any of them goes down or changes pricing.',
+                'Ask your developers how authentication, authorisation, and data encryption are handled before you launch — security is not a post-launch task.'
+              ]
+            },
+            {
+              id: 'architecture',
+              title: 'Architecture diagrams',
+              why: 'An architecture diagram makes the invisible structure of your product visible — who talks to what, where data lives, and where the single points of failure are. Founders who can read one catch problems before they become outages or security breaches.',
+              content: [
+                'A system architecture diagram shows the components of your product and how they connect. At minimum it should include: the client (browser or mobile app), your backend services, your database or databases, any third-party APIs or services, and the flow of data between them. You don\'t need to understand every technical detail — but you should be able to read one and ask informed questions about any component you don\'t recognise.',
+                'Ask for an architecture diagram in your first serious technical conversation with any development team. A team that can\'t produce one — or that produces one covering only the happy path with no mention of how failures are handled — is telling you something important about how they think about systems. Good engineers think in systems and document them; great ones do it before being asked.',
+                'Use architecture diagrams to identify single points of failure: components where if one thing breaks, the whole system breaks. Common examples include a single database with no read replicas or backups, a single server with no load balancing, or a critical feature that entirely depends on one third-party API with no fallback. Every single point of failure you identify before launch is an outage you can prevent.',
+                'The diagram should change as the product evolves. Many teams draw an architecture diagram at the start of a project and never update it — so it reflects a system that no longer exists. Require that any significant new component or integration be added to the diagram before it goes to production. A diagram that\'s 6 months out of date is less useful than no diagram, because it gives a false sense of understanding.',
+                'You don\'t need to create these yourself, but you do need to be able to review them. Use questions like: what happens to users if this component fails, where is user data stored and who can access it, how does data move from X to Y, and what external services does this step depend on? These questions reveal gaps that technical reviewers often overlook precisely because they understand the system too well to see what\'s missing.'
+              ],
+              takeaways: [
+                'Ask any development team for a current architecture diagram before the first serious technical meeting — the quality of what they produce is itself a signal.',
+                'Identify at least three single points of failure in your current architecture and ask what the mitigation plan is for each.',
+                'Require the architecture diagram to be updated whenever a significant new component or integration is added — make it a condition of deployment.'
+              ]
+            },
+            {
+              id: 'evaluating-talent',
+              title: 'Evaluating technical talent',
+              why: 'Hiring the wrong developer is one of the most expensive early-stage mistakes a founder can make — not just the salary cost, but the months of misdirected build and the messy codebase someone else then has to inherit.',
+              content: [
+                'The most reliable signal of a strong developer is not their resume, portfolio, or how confidently they speak — it is the quality of questions they ask before agreeing to build something. A developer who immediately starts talking about implementation before understanding the problem is a warning sign. One who asks about user behaviour, edge cases, expected scale, and how success will be measured before touching a keyboard is demonstrating the judgment that separates engineers who build the right thing from those who just build things.',
+                'For technical interviews, use a paid work sample over a timed coding test. Give candidates a small, realistic task — reviewing a spec and asking clarifying questions, debugging a simple piece of code from your actual stack, or reviewing a feature brief and identifying risks — and pay them for their time. This reveals how they communicate, how they approach ambiguity, and whether they ask the right questions. Leetcode-style tests filter for competitive programming skills that have almost no correlation with everyday engineering quality.',
+                'Assess for communication ability as rigorously as technical skill. The most technically capable developer who can\'t explain their decisions in plain language will cost you clarity, alignment, and time. Ask candidates to explain a technical trade-off they\'ve navigated — caching strategy, database choice, build-vs-buy decision — and watch whether their explanation becomes clearer or more jargon-heavy under follow-up questions. Clarity under questioning is a strong predictor of day-to-day working quality.',
+                'Check GitHub activity, open source contributions, or personal projects — not as a requirement, but as supplementary context. What they choose to build in their own time, and the care they take in how they do it, often reveals what they actually value. Sparse or low-quality personal repositories are not disqualifying; pristine repositories with no evident care for the code they\'re being paid to write is a mismatch worth probing.',
+                'Always speak to at least two references who are former direct managers or technical leads, not peers or colleagues the candidate selected themselves. Ask specifically: how did they handle technical disagreement, how did they communicate delays, and what type of environment brought out their best work? Those three questions surface the information most useful for predicting whether they\'ll thrive in an early-stage environment where requirements change frequently and ambiguity is the norm.'
+              ],
+              takeaways: [
+                'Evaluate the quality of a candidate\'s questions before you evaluate their answers — good engineers interrogate requirements before writing code.',
+                'Use a paid, realistic work sample instead of abstract coding tests; it reveals communication, judgment, and approach far better than algorithm puzzles.',
+                'Call two former managers — not peer references — and ask specifically how they handled disagreement, delays, and ambiguity.'
+              ]
+            },
+            {
+              id: 'tech-debt',
+              title: 'Technical debt',
+              why: 'Technical debt is the accumulated cost of shortcuts taken during development — it starts invisible, compounds silently, and eventually slows every new feature to a crawl. Understanding it lets you make intentional trade-offs rather than discovering them at the worst possible moment.',
+              content: [
+                'Technical debt is not inherently bad — it\'s a trade-off. Taking a shortcut to ship faster is sometimes the right decision, in the same way that borrowing money to grow faster is sometimes the right decision. The problem is undisclosed debt: shortcuts taken without acknowledgement, without documentation, and without a plan to address them. Disclosed debt is a tool; undisclosed debt is a liability that accumulates interest invisibly.',
+                'The most common forms of technical debt in early-stage startups are: hard-coded configurations that need to change for every new customer or environment, duplicated code that makes the same bug fix necessary in five places, missing test coverage that makes it impossible to change existing functionality with confidence, and architecture decisions made for a product with 100 users that can\'t scale to 10,000. Each one is manageable when small. Each one becomes catastrophic if ignored long enough.',
+                'Ask your developers to maintain a debt register: a simple list of known shortcuts, why they were taken, and what the estimated cost of fixing them is. This surfaces what your team knows is a problem but hasn\'t had time or priority to address. A debt register also makes trade-off conversations possible — instead of "we need to refactor everything," you can ask "which of these five items is most likely to block us in the next quarter?"',
+                'The cost of technical debt compounds like financial debt. A small shortcut today adds friction to every feature built on top of it. That friction adds more shortcuts. Those shortcuts add more friction. The symptoms — features taking longer and longer, bugs appearing in unexpected places, developers becoming reluctant to touch certain parts of the codebase — typically arrive 12–18 months after the debt was taken on, making it hard to trace back to the original decisions.',
+                'Allocate dedicated time for debt reduction every sprint, even during periods of fast growth. A common practice is reserving 20% of each sprint for technical maintenance — refactoring, improving test coverage, updating dependencies, addressing known debt items. Teams that defer this entirely until it becomes a crisis typically face a multi-month slowdown that would have been prevented by sustained small investments throughout.'
+              ],
+              takeaways: [
+                'Ask your developers to maintain a written debt register — known shortcuts, why they were taken, and the estimated cost to fix each.',
+                'Reserve 20% of every sprint for technical maintenance; teams that skip this always pay more later, usually at the worst possible time.',
+                'When a new feature takes unexpectedly long to build, ask whether technical debt is the cause — that\'s the earliest and cheapest moment to diagnose it.'
+              ]
+            }
           ]
         },
         {
