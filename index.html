@@ -1470,10 +1470,74 @@
           id: 'scaling',
           title: 'Scaling and Team',
           topics: [
-            { id: 'first-5-hires', title: 'Your first 5 hires' },
-            { id: 'culture', title: 'Building culture' },
-            { id: 'delegation', title: 'Delegation' },
-            { id: 'pivot-persist', title: 'Pivot vs persist' }
+            {
+              id: 'first-5-hires',
+              title: 'Your first 5 hires',
+              why: 'The first five people you hire set the technical bar, cultural norms, and operating patterns for everyone who follows. A mistake at hire three is far more expensive than a mistake at hire thirty — it compounds into every subsequent hire made in that person\'s image.',
+              content: [
+                'Your first hire should close the most critical gap between what you can do and what the business needs done. For most technical founders, that\'s a strong generalist salesperson or a customer-facing role — because the riskiest assumption at early stage is almost always that people will pay, not that you can build. For non-technical founders, it\'s typically a technical co-founder or lead engineer. Hire toward your biggest constraint, not your comfort zone.',
+                'Hires two through five should be people who are genuinely better than you at their specific function. The temptation at this stage is to hire people who are strong but slightly junior — people you feel confident managing, who won\'t challenge your judgment. That impulse produces a mediocre team. The standard should be: would I feel slightly intimidated working alongside this person? If not, keep looking.',
+                'Avoid premature specialisation in the first five. Early-stage startups need people who can operate across ambiguous boundaries — an engineer who can talk to customers, a marketer who can close deals, a customer success person who can write documentation. Narrow specialists who need a full team around them to be effective are the right hire at 50 people, not at 5. Value demonstrated range and comfort with ambiguity over depth in a single skill.',
+                'Equity conversations happen early and set expectations that are very difficult to change later. Build a standard equity model before your first hire — a schedule that reflects seniority, timing of joining, and vesting over four years with a one-year cliff. Decide the model first, then apply it consistently. Ad-hoc equity decisions made under hiring pressure create resentment and legal complexity when they surface later.',
+                'Move quickly once you\'ve decided, but don\'t mistake speed for skipping diligence. The best candidates at this stage have options. A slow, bureaucratic hiring process loses them to a better-run competitor. But a fast hire without reference checks or a realistic job preview creates a mismatch that can take six months to recognise and another three to unwind. Speed and diligence are not opposites — a focused two-week process achieves both.'
+              ],
+              takeaways: [
+                'Identify your single biggest constraint right now — customer acquisition, product, or operations — and make your next hire close that specific gap.',
+                'Set a standard equity model before you make any offer, then apply it consistently — ad-hoc equity decisions always create problems later.',
+                'Aim for hires who are better than you at their function, not comfortable ones — the discomfort of hiring great people is temporary; the cost of hiring mediocre ones is permanent.'
+              ]
+            },
+            {
+              id: 'culture',
+              title: 'Building culture',
+              why: 'Culture is not a set of values on a wall — it is the sum of what behaviour actually gets rewarded and tolerated in your company. It is being built right now whether you\'re intentional about it or not, and early patterns are extremely difficult to change once set.',
+              content: [
+                'Culture is defined by what happens when something goes wrong, not when things go well. When a deadline is missed, does the team problem-solve or look for someone to blame? When a customer is lost, is it discussed openly to extract learning or swept under the rug? When someone speaks up with a dissenting view, are they heard or sidelined? The answers to these questions describe your culture more accurately than any document you could write about it.',
+                'The founder\'s behaviour is the most powerful cultural signal in an early-stage company. If you work weekends and respond to Slack at midnight, you\'ve communicated that this is expected — regardless of what you say about work-life balance. If you take credit for team work, you\'ve told everyone that attribution matters and they should protect their own contributions. If you respond to bad news with blame, you\'ve told people to hide problems. Your actions set the template; your words are secondary.',
+                'Decide explicitly what you will and won\'t tolerate before you need to enforce it. The most culturally damaging moments are when a high performer behaves badly — treats a colleague poorly, cuts corners on quality, or is dishonest — and nothing happens because they\'re too valuable to lose. Everyone watching learns that performance excuses behaviour. One decision to tolerate it costs you more in cultural damage than the loss of the high performer would have.',
+                'Write down your actual operating principles — not aspirational values, but specific behaviours you expect. Not "we value transparency" but "we share bad news immediately and in full, even when it\'s uncomfortable." Not "we value customer focus" but "before shipping any feature, someone must talk to three customers who would use it." Specific behavioural descriptions can be hired against, evaluated against, and enforced. Abstract values cannot.',
+                'Protect cultural fit without using it as cover for homogeneity. "Culture fit" used carelessly becomes a reason to hire people who look and think like you, which produces blind spots and limits what your team can see and solve. The right frame is "culture add" — does this person share the core operating principles while bringing perspectives, backgrounds, or approaches the team currently lacks? The strongest teams are culturally cohesive and cognitively diverse simultaneously.'
+              ],
+              takeaways: [
+                'Write your operating principles as specific behaviours, not abstract values — they should be concrete enough to hire against and evaluate against.',
+                'Identify one behaviour you\'ve been tolerating that contradicts the culture you want, and address it this week — every day it continues is a cultural message to everyone watching.',
+                'Audit your own recent behaviour: what cultural norms have you been modelling through your actions, independent of what you\'ve said?'
+              ]
+            },
+            {
+              id: 'delegation',
+              title: 'Delegation',
+              why: 'Every task a founder does that someone else could do is a task not spent on the things only a founder can do. Failure to delegate doesn\'t just limit your capacity — it limits the growth ceiling of the entire company.',
+              content: [
+                'The reason founders don\'t delegate is almost never time — it\'s trust. Trust that the other person cares as much as you do, knows what good looks like, and will tell you when something goes wrong rather than quietly hoping it resolves itself. That trust is built deliberately, through small delegations that succeed, not assumed from day one. Start with tasks that are low-risk if they go wrong, give clear context and a success definition, then inspect the output and discuss — not to micromanage, but to close the feedback loop.',
+                'Delegation without context is abandonment. Before handing off any significant responsibility, explain: why this matters to the business, what a good outcome looks like and by when, what constraints exist (budget, stakeholder sensitivities, non-negotiables), and how much latitude the person has to make decisions without checking with you. A delegate who doesn\'t have this context will either over-check in or make decisions you\'d have made differently — both are delegation failures, and both are the delegator\'s fault.',
+                'Distinguish between delegating a task and delegating accountability. Delegating a task means asking someone to do something and reviewing the output. Delegating accountability means transferring ownership of an outcome — including the decision-making authority that goes with it. Most founders delegate tasks but retain accountability invisibly, which means the person doing the work can never truly own it. As the company grows, you need to move toward delegating accountability, not just work.',
+                'Create a "stop doing" list alongside your to-do list. Once a month, identify three things you did this month that someone else on the team could do with appropriate context. Move those things to their plate. If you can\'t identify three such things, you\'re either in a very lean operation or you\'re holding on to work for reasons that aren\'t about capability. Delegation should feel slightly uncomfortable — if it feels entirely comfortable, you\'re probably not delegating enough.',
+                'The failure mode to watch for is delegation followed by invisible re-involvement. You hand something off, then silently check on it constantly, offer unsolicited input, and eventually take it back when it\'s not going exactly as you\'d have done it. This is worse than not delegating — it demoralises the person, signals that handoffs aren\'t real, and trains the team to wait for your involvement rather than developing their own judgment. If you\'re going to delegate something, delegate it fully or not at all.'
+              ],
+              takeaways: [
+                'For your next delegation, provide: why it matters, what success looks like, the constraints, and how much decision latitude the person has — before the work starts.',
+                'Build a monthly "stop doing" list: three things you did this month that someone else could own with the right context.',
+                'If you\'ve delegated something and find yourself silently re-involved, decide explicitly — either hand it back fully or let it go fully; the middle position destroys both the outcome and the relationship.'
+              ]
+            },
+            {
+              id: 'pivot-persist',
+              title: 'Pivot vs persist',
+              why: 'Pivoting too early wastes the learning embedded in your current direction. Persisting too long burns runway on a direction that evidence has already disconfirmed. The discipline is knowing which situation you\'re actually in.',
+              content: [
+                'A pivot is a structured change in strategy in response to evidence — not a reaction to discouragement, investor pressure, or a slow month. Before deciding to pivot, ask: what specific evidence are we responding to, and does it represent a signal or noise? A signal is a pattern across multiple data points from multiple sources over a meaningful time period. Noise is a bad week, one churned customer, or feedback from someone who was never your target user. Pivoting in response to noise is a mistake; pivoting in response to signal is discipline.',
+                'The clearest case for pivoting is when you\'ve talked to enough customers, run enough experiments, and waited long enough to rule out execution as the variable — and the data still doesn\'t support the original hypothesis. If you\'ve genuinely tested the riskiest assumption and it\'s failed cleanly, the cost of persisting is runway that could fund a better direction. The hardest case is when you can\'t tell whether poor results reflect a bad idea or poor execution. In that case, isolate and test execution first before concluding the idea is wrong.',
+                'Most valuable pivots are adjacent rather than wholesale. A pivot from one target customer to a better-fit segment, from a product feature set to a narrower wedge that converts better, or from a B2C to a B2B delivery model, preserves the learning and infrastructure from the original direction while redirecting effort toward higher-signal opportunity. A complete restart — different problem, different user, different solution — discards nearly all of your accumulated learning and should be treated with the same rigour as starting a new company.',
+                'The case for persisting is strongest when: you have genuine customer love in a specific segment even if overall metrics are flat, there is a clear and testable hypothesis about what would change the trajectory, you have not yet exhausted reasonable approaches to the core problem, and your runway supports the time required to run the next test. Persistence without a specific next test is not resilience — it is inertia. Know exactly what you\'re persisting toward.',
+                'Talk to other founders who have faced the same decision before making it — specifically ones who pivoted and wish they hadn\'t, and ones who persisted and wish they had. Both types exist and both have useful things to say. Investors, by contrast, have structural incentives that don\'t perfectly align with your situation. They hold portfolios; you hold one company. Their advice on pivot vs persist is worth hearing but not dispositive.'
+              ],
+              takeaways: [
+                'Before any pivot decision, write down the specific evidence you\'re responding to and whether it represents a pattern across multiple sources or a reaction to recent noise.',
+                'If results are poor, isolate execution from idea as the variable — test execution improvements before concluding the idea itself is wrong.',
+                'Know exactly what you\'re persisting toward: a specific next experiment with a measurable outcome, not just more time doing the same thing.'
+              ]
+            }
           ]
         }
       ],
