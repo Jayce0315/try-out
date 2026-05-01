@@ -1098,10 +1098,74 @@
           id: 'operations',
           title: 'Inventory and Operations',
           topics: [
-            { id: 'stock',       title: 'Stock management basics' },
-            { id: 'suppliers',   title: 'Supplier relationships and negotiation' },
-            { id: 'checklists',  title: 'Daily operations checklists' },
-            { id: 'seasonal',    title: 'Handling seasonal demand changes' }
+            {
+              id: 'stock',
+              title: 'Stock management basics',
+              why: 'Inventory is cash sitting on a shelf. Too much chokes your working capital; too little loses sales and damages customer trust. Getting this balance right is one of the most direct ways to improve cash flow without selling more.',
+              content: [
+                'Apply ABC analysis to your stock. Rank every product by how much revenue it generates. Your A items — typically the top 20% of SKUs that drive 80% of your revenue — need tight tracking, accurate par levels, and reliable supply. Your B items need moderate attention. Your C items — slow movers that tie up cash without moving — should be reviewed quarterly for whether they are worth carrying at all.',
+                'Set a reorder point for every A and B item: the stock level at which you automatically place a new order. The formula is simple — daily sales rate multiplied by your supplier lead time, plus a safety buffer. If you sell 8 units per day and your supplier takes 7 days to deliver, your reorder point is 56 units plus buffer. When stock hits that number, order. Do not wait until you are nearly out.',
+                'Calculate your stock turnover rate: cost of goods sold divided by average inventory value. A higher number means stock moves quickly — good. A low number means cash is sitting idle. Benchmark against your industry: a food business might turn inventory 40 times a year; a gift shop might turn it 4. Know your number and watch whether it is improving or declining over time.',
+                'Count A items weekly rather than doing one large monthly stocktake. Cycle counting — checking a rotating subset of items each week — catches discrepancies before they grow and is less disruptive than shutting down for a full count. You get more accurate data more often for less effort in total.',
+                'Track shrinkage: the gap between what your records say you have and what is actually on the shelf. Shrinkage above 1–2% of inventory value signals a system problem — not just occasional bad luck. The causes are usually some combination of staff theft, customer theft, supplier short-packing, or miscounting at receiving. Investigate the source before assuming you know which one it is.'
+              ],
+              takeaways: [
+                'Categorise your products into A, B, and C by revenue contribution, then set reorder points for A and B items first.',
+                'Calculate your stock turnover rate this month and note whether it has been improving or declining — it is the clearest single indicator of inventory health.',
+                'Start weekly cycle counts for your top 10 A items rather than waiting for a monthly full stocktake.'
+              ]
+            },
+            {
+              id: 'suppliers',
+              title: 'Supplier relationships and negotiation',
+              why: 'A 3% reduction in your cost of goods can double your net profit margin in a thin-margin business. Supplier relationships are a direct financial lever that most small business owners leave completely untouched.',
+              content: [
+                'Treat your top three suppliers as business relationships worth investing in — not just transactional contacts. Know their sales rep by name. Pay on time, every time. Communicate early if something changes on your end. Suppliers give better pricing, faster responses, and priority access during stock shortages to accounts they trust and enjoy working with. These advantages do not appear in any price list.',
+                'Negotiate payment terms before negotiating price. Getting net-30 instead of cash-on-delivery means you receive and potentially sell the goods before you have to pay for them. Net-60 is even more valuable if you can get it. This is free working capital — it improves your cash position without changing your prices or costs. Ask: \'What would it take to move to 30-day payment terms?\' Most suppliers say yes to reliable, long-standing accounts.',
+                'Get at least one competing quote for your top supplier\'s products every year — even if you have no intention of switching. Knowing the market rate gives you the facts to have an honest conversation. Share the quote with your current supplier: \'We received this from another company. We\'d prefer to stay with you — is there anything you can do on price or terms?\' Most respond positively rather than risk losing a reliable account.',
+                'Qualify and maintain at least one backup supplier for your highest-volume A items. Supply disruptions, quality failures, and business closures happen without warning. A backup supplier you have already ordered from — even once — is infinitely more useful than one you have only looked up when you are already out of stock. The cost of placing a small test order is trivial compared to the cost of an unexpected stockout.',
+                'Consider consolidating purchases where it makes sense. Ordering from six suppliers for things two suppliers could cover reduces your negotiating leverage with each and adds unnecessary administration. Consolidating spend with fewer suppliers often unlocks volume tiers and better terms — you become a meaningfully larger customer to each one.'
+              ],
+              takeaways: [
+                'Ask your primary supplier for net-30 payment terms if you do not already have them — frame it as supporting your growth and most will agree for reliable accounts.',
+                'Get a competing quote for your largest supplier cost this quarter and share it with them before making any decision.',
+                'Place a small test order with a backup supplier for your single most critical item now, before you ever need them urgently.'
+              ]
+            },
+            {
+              id: 'checklists',
+              title: 'Daily operations checklists',
+              why: 'Checklists turn inconsistent individual performance into repeatable business operations. They are also the thing that makes it possible for you to take a day off without the business falling apart in your absence.',
+              content: [
+                'Write your opening checklist by physically walking your entire opening process from the moment you arrive — every step, not just the obvious ones. Include unlocking, disabling the alarm, turning on equipment in the right order, checking cash float, reviewing the day\'s bookings or reservations, checking stock levels on key items, and a brief team briefing if you have staff. The test: can a trained person open correctly without calling you?',
+                'Create a separate closing checklist with the same level of detail: cash reconciliation, restocking for tomorrow, cleaning tasks by area, equipment shutdown sequence, refrigeration checks, security sweep, and any end-of-day records. Closing procedures are where shortcuts are most common — a checklist prevents the expensive oversights that happen when people are tired and ready to leave.',
+                'Add a shift-handover step between any two staff members ending and starting a shift. The incoming person needs to know: what happened today that affects them, any current stock shortages, pending customer issues, and anything that needs following up. Without a formal handover moment, this information evaporates and problems fall through the gap.',
+                'Post checklists at the physical location where the task is performed, not in a folder or on a shared drive. Laminated sheets fixed to the relevant area — the register, the storage room, the kitchen — are used consistently. Checklists that require navigating to another location to retrieve rarely get used. Visibility at the point of action is the whole point.',
+                'Review and update every checklist every 90 days — and immediately after any operational incident. A checklist that does not reflect current reality is worse than no checklist, because it creates a false sense of completeness. When something goes wrong and it was not on the checklist, add it before the end of that shift.'
+              ],
+              takeaways: [
+                'Write your opening and closing checklists this week by physically walking through each process end to end and recording every step.',
+                'Post both checklists at the location where the tasks are performed — not in a folder, not on someone\'s phone.',
+                'Treat every operational incident as a checklist update: if a mistake could have been prevented by a checklist step, add that step before the day ends.'
+              ]
+            },
+            {
+              id: 'seasonal',
+              title: 'Handling seasonal demand changes',
+              why: 'Seasonality is predictable — being caught underprepared is a planning failure, not bad luck. The businesses that survive slow seasons are the ones that prepared for them during the busy ones.',
+              content: [
+                'Chart your revenue by week for the past 12 months and identify your seasonal pattern. Most businesses have 8–12 slow weeks and 4–8 peak weeks per year, and they follow a consistent shape year to year. Once you can see the pattern, you plan for it instead of reacting to it. If you have been trading for less than a year, use industry benchmarks as your starting point.',
+                'Build a cash reserve during your peak season specifically to fund your slow periods. A simple rule: during each of your top 8 trading weeks, transfer 10–15% of that week\'s revenue into a separate account labelled for this purpose. This money pays rent and salaries when revenue drops — without needing a loan or running on stress. It is the closest thing to a guaranteed buffer that most small businesses can build.',
+                'Order inventory for peak periods 6–8 weeks earlier than feels necessary. Supplier lead times, shipping delays, and clearance processes mean that ordering when demand is already rising puts you 4–6 weeks behind. Map your lead times against your expected demand curve on a calendar and move your order dates forward accordingly. The cost of being overstocked by a week is trivial compared to the cost of being out of stock during your busiest period.',
+                'Use slow periods actively rather than just surviving them. Staff training, equipment maintenance, supplier negotiations, menu or range updates, deep cleans, and minor renovations are all best done when the business is quiet. Businesses that treat the slow season as downtime come out of it the same as they went in. Businesses that treat it as preparation come out sharper.',
+                'Create demand-smoothing promotions for your slow periods rather than accepting the dip as fixed. A loyalty incentive valid only in your quietest weeks, a bundled offer that gives customers a reason to come in during slow times, or a corporate or event catering push in January can meaningfully lift your floor revenue — without training regular customers to wait for discounts on your core offer.'
+              ],
+              takeaways: [
+                'Chart your weekly revenue for the past 12 months and mark your slowest 8 weeks — those dates now go into your planning calendar, not your worry list.',
+                'Transfer 10–15% of revenue from each peak week into a dedicated slow-season cash reserve — treat it as a fixed cost, not a discretionary saving.',
+                'Move your peak-season inventory orders 6–8 weeks earlier than instinct suggests — by the time demand is visible, it is already too late to reorder in time.'
+              ]
+            }
           ]
         }
       ],
