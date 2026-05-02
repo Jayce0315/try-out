@@ -2140,10 +2140,74 @@
           id: 'operations',
           title: 'Operations and Logistics',
           topics: [
-            { id: 'fulfillment', title: 'Fulfillment' },
-            { id: 'inventory', title: 'Inventory management' },
-            { id: 'returns', title: 'Handling returns' },
-            { id: 'scaling-ops', title: 'Scaling operations' }
+            {
+              id: 'fulfillment',
+              title: 'Fulfillment',
+              why: 'Fulfilment speed and accuracy are two of the most visible quality signals a buyer experiences after purchase. A late shipment or wrong item can undo a great product and a positive listing — and both directly affect your platform metrics and seller rating.',
+              content: [
+                'Platforms like Shopee and Lazada set mandatory ship-by deadlines — typically 2 business days from order confirmation — and track your on-time shipment rate. Falling below the platform threshold triggers ranking suppression, reduced visibility in promotions, and eventually account penalties. Treat the ship-by deadline as a hard constraint, not a guideline. If you cannot reliably ship within the window given your current volume and packing setup, that is an operations problem to solve before scaling.',
+                'Standardise your packing process before volume makes inconsistency expensive. Write a packing checklist for each product: which box or mailer size, what void fill, whether a thank-you card is included, how the product is oriented, and how the label is applied. A packing checklist reduces errors, speeds up the process once it becomes routine, and makes it possible for someone else to pack orders accurately without you present for every one.',
+                'Choose your courier based on the combination of delivery speed, damage rate, and coverage for your target buyers — not just on price per shipment. A courier that is $0.50 cheaper per parcel but delivers damaged goods 5% of the time costs more in returns, replacements, and negative reviews than the saving is worth. Check which couriers are integrated into your platform for automated tracking updates, as manual tracking creates extra work and buyer uncertainty.',
+                'Batch your packing rather than packing orders one at a time as they come in. Set a specific packing window — for example, all orders placed before 11am are packed and handed to the courier by 2pm. Batching reduces context switching, allows you to prepare materials in bulk, and creates a predictable daily rhythm that is much easier to delegate than an ad-hoc process. Most sellers who do high volume process orders in two daily batches.',
+                'Keep a small buffer stock of packaging materials — boxes, mailers, bubble wrap, tape, and labels — so you never miss a ship-by deadline because you ran out of supplies. Running out of packaging during a sales peak is an avoidable problem that causes real ranking damage. A one-week buffer of all packaging materials, reviewed weekly, costs almost nothing and eliminates a failure mode that catches many growing sellers off guard.'
+              ],
+              takeaways: [
+                'Treat the platform ship-by deadline as a hard constraint — on-time shipment rate directly affects your search ranking and eligibility for promotions.',
+                'Write a packing checklist for every product so the process is consistent, fast, and delegatable without your direct involvement.',
+                'Keep at least one week of packaging materials in stock at all times; running out during a peak is an avoidable ranking risk.'
+              ]
+            },
+            {
+              id: 'inventory',
+              title: 'Inventory management',
+              why: 'Running out of stock on a selling product kills your ranking momentum and takes weeks to recover. Overstocking ties up cash in slow-moving goods and adds storage costs. Inventory management is where cash flow and sales performance connect directly.',
+              content: [
+                'Calculate a reorder point for every product you sell: the stock level at which you trigger a new purchase order. The formula is: (average daily sales × supplier lead time in days) + safety stock. If you sell 10 units per day and your supplier takes 14 days to deliver, your reorder point is 140 units plus a safety buffer of 20–30% to cover demand variability and supplier delays. When stock hits the reorder point, you order — not when you run out, and not when you feel like it.',
+                'Track daily sales velocity per SKU, not just total monthly sales. A product selling 10 units a day requires very different inventory planning than one selling 10 units a week. Most marketplace seller dashboards provide this data. If yours doesn\'t, export your order history weekly and calculate it yourself. Velocity changes with seasons, promotions, algorithm rank changes, and competitor activity — your reorder point should be recalculated whenever velocity shifts meaningfully.',
+                'Maintain a stockout log: every time a product goes out of stock, record the date, how long it was out, and the estimated lost sales. Most sellers have a vague sense that stockouts are bad but no quantified understanding of what they cost. If your product sells 15 units per day and it is out of stock for 5 days, that is 75 lost sales at whatever your margin per unit is — plus the ranking recovery cost. Making this visible creates urgency around inventory discipline that intuition alone does not.',
+                'Platform inventory systems sync with your available stock and automatically suppress listings when stock reaches zero. Ensure your platform inventory count is accurate at all times — discrepancies between your actual stock and your listed stock cause overselling (orders you cannot fulfil) or invisible stockouts (listings suppressed when you actually have stock). Do a physical count against your platform numbers weekly for fast-moving products and monthly for slow movers.',
+                'For sellers using third-party fulfilment or storing stock in multiple locations, use inventory management software from the point it becomes difficult to track manually. Seller tools like Ginee, Jubelio, or StoreHub centralise inventory across platforms and locations, auto-sync stock levels, and flag reorder points. The cost of overselling or unexpected stockouts far exceeds the subscription cost of basic inventory software once you are managing more than 20–30 active SKUs.'
+              ],
+              takeaways: [
+                'Calculate a reorder point for every SKU: (daily sales × lead time) + safety buffer — and order when stock hits that number, not when it runs out.',
+                'Keep a stockout log with dates and estimated lost sales; making the cost visible creates inventory discipline that intuition alone does not.',
+                'Verify your platform inventory count matches your physical stock weekly for fast-moving products — discrepancies cause overselling or invisible suppressions.'
+              ]
+            },
+            {
+              id: 'returns',
+              title: 'Handling returns',
+              why: 'Returns are an unavoidable cost of e-commerce, but how you handle them determines whether they damage your seller rating, generate negative reviews, and repeat, or become a neutral cost you manage efficiently.',
+              content: [
+                'Know your platform\'s return policy before a return request arrives — the rules for who pays return shipping, the window for buyer return requests, the conditions under which you must accept returns, and how disputes are resolved. Shopee and Lazada both have detailed return policies that vary by category and reason. Sellers who respond to return requests based on their own policy preferences rather than the platform\'s rules lose disputes consistently and accumulate penalty flags on their account.',
+                'Process return requests quickly. Both platforms track your return response time, and slow responses are treated as seller non-compliance regardless of the merits of the case. Set a rule in your business: any return request is responded to within 24 hours, even if only to acknowledge it and state that you are reviewing. Speed signals good faith; delay signals avoidance and frequently results in automatic rulings in the buyer\'s favour.',
+                'Inspect every returned item before restocking or disposing of it. Photograph the returned item when you receive it, noting its condition against what was shipped. This protects you in disputes where buyers claim a return was for a defective product when the item is actually undamaged. It also helps you identify patterns: if 30% of your returns for a specific product are for the same defect, that is a product quality or listing accuracy problem you need to fix at the source.',
+                'Calculate your true return cost per product and include it in your unit economics. A full return cost includes: the original outbound shipping (usually non-recoverable), the return shipping if you cover it, your time to inspect and process, and the value of the item if it cannot be restocked (damaged, opened, or used). For most categories a 3–7% return rate is normal; above 10% is a signal that either the product quality, the listing accuracy, or both need attention.',
+                'Use return reasons to improve your listing and product. The most common return reasons — "not as described," "defective," "wrong item received," and "changed mind" — each point to different fixes. "Not as described" means your listing photos or description are creating inaccurate expectations. "Defective" means a quality or packaging issue. "Wrong item" means a packing or labelling error. "Changed mind" is often driven by impulse purchases and may indicate your listing is attracting the wrong buyer. Each reason is a data point, not just a cost.'
+              ],
+              takeaways: [
+                'Read your platform\'s return policy in full for your category before you receive your first return request — surprises in disputes always go against the unprepared seller.',
+                'Respond to every return request within 24 hours regardless of merit — slow responses are treated as non-compliance and result in automatic rulings against you.',
+                'Track return reasons by category and treat patterns as product or listing improvement signals, not just isolated costs.'
+              ]
+            },
+            {
+              id: 'scaling-ops',
+              title: 'Scaling operations',
+              why: 'The processes that work at 10 orders a day break at 100. Scaling operations means building systems and structures that handle higher volume without a proportional increase in your personal time and attention.',
+              content: [
+                'Identify the manual steps in your current fulfilment process that would become bottlenecks at three to five times your current volume. Common bottlenecks are: printing and applying shipping labels one at a time, packing without a standardised layout, managing customer messages individually across platform chat, manually updating inventory counts, and reconciling orders across multiple platforms without automation. Document your current process end to end before you try to improve it — you cannot systematise what you have not mapped.',
+                'Automate order processing before hiring people to do it manually. Both Shopee and Lazada offer bulk order processing and bulk label printing. Third-party tools like Ginee, Shopify, or EasyParcel integrate with multiple platforms to centralise order management, generate labels in bulk, and push tracking numbers automatically. Automating the mechanical steps in order processing typically saves 2–4 hours per day at modest order volumes and scales without adding headcount.',
+                'When volume justifies it, outsourcing fulfilment to a third-party logistics provider (3PL) removes the physical constraint on growth. A 3PL stores your inventory, picks and packs orders, and handles carrier handoff — you send them stock and they handle everything downstream. The unit cost is higher than self-fulfilment, but you recover the space, time, and management overhead. In Southeast Asia, 3PL services integrated with Shopee and Lazada are widely available and increasingly affordable at modest volumes.',
+                'Hire packing help before you hire sales help. The constraint on a growing e-commerce business is usually operational — packing, handling, and logistics — before it is commercial. A part-time packer at modest cost can double your daily output and free your time for sourcing, listing improvement, and strategy. The economics are straightforward: if you earn $20 of contribution margin per order and can fulfil 20 more orders per day with a packer costing $40, the ROI is immediate.',
+                'Build standard operating procedures for every repeatable task before delegating them. A procedure does not need to be long — a one-page checklist with photos of the correct packing layout, step-by-step label printing instructions, and the handling steps for damaged arrivals is enough for a new packer to operate independently. Documented procedures mean that a staff member leaving or being absent does not halt your operations, and that quality is consistent regardless of who is doing the task.'
+              ],
+              takeaways: [
+                'Map your current fulfilment process end to end before trying to scale it — you cannot systematise what you have not documented.',
+                'Automate bulk label printing and order processing before hiring people to do those tasks manually — it scales without adding headcount.',
+                'Write a one-page SOP with photos for every repeatable fulfilment task before delegating it to anyone.'
+              ]
+            }
           ]
         },
         {
