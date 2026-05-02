@@ -2066,10 +2066,74 @@
           id: 'getting-sales',
           title: 'Getting Sales',
           topics: [
-            { id: 'algorithms', title: 'Platform algorithms' },
-            { id: 'listing-optimization', title: 'Listing optimization' },
-            { id: 'ads', title: 'Running ads' },
-            { id: 'social-proof', title: 'Building social proof' }
+            {
+              id: 'algorithms',
+              title: 'Platform algorithms',
+              why: 'Shopee and Lazada\'s search algorithms determine which listings buyers see — and most sellers have no idea how they work. Understanding the signals the algorithm rewards lets you compete on merit rather than guessing why some listings rank and others don\'t.',
+              content: [
+                'Marketplace algorithms rank listings based on a combination of relevance signals and performance signals. Relevance signals include how well your listing title, description, and category match the buyer\'s search query. Performance signals include click-through rate (how often buyers click your listing in search results), conversion rate (how often clicks turn into purchases), sales velocity (how many units you sell per day), and listing recency. Both categories matter — a perfectly optimised listing with no sales history will rank below a less-optimised listing with strong performance data.',
+                'Sales velocity is the single most powerful ranking signal on both Shopee and Lazada. The algorithm\'s goal is to show buyers products they are likely to purchase, and past sales are the strongest predictor. This creates a bootstrapping problem for new listings: you need sales to rank, but you need to rank to get sales. The standard approach is to drive initial sales through external traffic, promotional pricing, or platform advertising specifically to build early velocity before relying on organic search.',
+                'Click-through rate is influenced primarily by your main listing photo and price. In a search results page, buyers see your thumbnail image, title, price, and star rating before clicking. A main photo that clearly shows the product, uses a clean background, and highlights a key benefit or use case will outperform a dark, cluttered, or unclear image regardless of how good the product is. Test different main images by tracking click-through rate in your seller dashboard — most platforms surface this metric.',
+                'Conversion rate is where listing quality pays off. Once a buyer clicks through to your listing, the quality of your photos, description, reviews, and Q&A determines whether they buy or bounce. A high click-through rate but low conversion rate tells you the listing is winning attention but failing on trust or clarity. The algorithm penalises poor conversion just as it rewards good conversion — a listing that attracts clicks but doesn\'t convert will rank lower over time.',
+                'Platform algorithms also respond to seller-level signals: your fulfilment speed, cancellation rate, response time to buyer messages, and dispute rate all affect your search visibility. A seller account with a high cancellation rate or slow response time will see ranking suppression across all their listings, not just the affected product. Treat your seller metrics dashboard as a ranking factor, not just an operational report.'
+              ],
+              takeaways: [
+                'Prioritise building early sales velocity on new listings — use promotions or ads specifically to generate initial orders before relying on organic ranking.',
+                'Check click-through rate and conversion rate separately in your seller dashboard; they point to different problems and different fixes.',
+                'Monitor your seller-level metrics — cancellation rate, response time, dispute rate — as ranking factors, not just operational numbers.'
+              ]
+            },
+            {
+              id: 'listing-optimization',
+              title: 'Listing optimization',
+              why: 'Your listing is your salesperson — it works around the clock, handles every buyer objection, and either closes the sale or loses it without you present. Most sellers underinvest in listing quality and pay for it in conversion rates.',
+              content: [
+                'Your listing title is the most important text for search ranking. Structure it as: primary keyword + secondary keyword + key attribute + brand or variant. For example: "Stainless Steel Lunch Box Bento Box Leakproof 1000ml for Adults Kids." Include the words buyers actually search for — check the search suggestions that appear when you type your product into Shopee or Lazada\'s search bar; those autocomplete terms are high-volume queries you should incorporate. Do not stuff the title with irrelevant keywords; platforms penalise keyword stuffing and buyers find it off-putting.',
+                'Photos drive more purchase decisions than any other element of your listing. The minimum standard is: a clean white background main image showing the full product, three to four lifestyle images showing the product in use, a dimensions or size reference image, and a features-and-benefits graphic. For products where quality matters, a close-up detail image showing materials or construction is worth including. Every photo should be high resolution — blurry or dark images signal low quality before a buyer has read a single word.',
+                'Write your description to answer the questions buyers have before they ask them. Structure it as: what the product is and its primary benefit, key features with specific measurements and materials, who it is for and the use cases it covers, what is in the box, and any compatibility or sizing information relevant to the category. Anticipate the Q&A you will receive and answer those questions in the description. Every question a buyer has to ask is a friction point that reduces conversion.',
+                'Attributes and category selection affect both search visibility and buyer filtering. Fill in every attribute field the platform offers — material, colour, size, weight, brand, and any category-specific fields. Buyers filter search results by these attributes; a listing missing an attribute will not appear in filtered searches even if it matches the query. Category selection affects which search queries your listing is eligible to appear for — research which category the bestselling listings for your product use before choosing.',
+                'A/B test your main listing image and title systematically before concluding that a listing is optimised. Most platforms allow you to see performance metrics by listing. Change one element at a time, run it for a week or more, and compare click-through rate or conversion rate before and after. The listings that perform best are almost never the first version — they are the product of iterative testing against real buyer behaviour.'
+              ],
+              takeaways: [
+                'Structure your title as primary keyword + secondary keyword + key attribute + variant, using terms from the platform\'s own search autocomplete.',
+                'Include at minimum: a clean white background main image, three lifestyle photos, a dimensions image, and a features graphic — anything less is leaving conversion on the table.',
+                'Answer your most common buyer questions in the description before they are asked; every unanswered question is a friction point that reduces conversion.'
+              ]
+            },
+            {
+              id: 'ads',
+              title: 'Running ads',
+              why: 'Platform ads are the fastest way to generate visibility for a new listing and the most dangerous way to lose money if you run them without understanding your unit economics. The goal is profitable customer acquisition, not just traffic.',
+              content: [
+                'Both Shopee and Lazada offer keyword-based search ads (similar to Google search ads) and display or discovery ads. Search ads show your listing when buyers search for specific keywords and are the most direct traffic source for products with known search demand. Display ads show your product to buyers browsing categories or similar listings and are better for discovery. For most new sellers, search ads on their primary keywords are the right starting point — the buyer intent is already established.',
+                'Set your campaign budget based on your target cost per acquisition, not on what you can afford to spend. Your maximum acceptable cost per acquisition is your contribution margin per unit — if you spend more than that acquiring a sale, the sale is unprofitable. Work backwards: if your contribution margin is $10 and your conversion rate on ad traffic is 3%, your maximum cost per click is $0.30 (10 × 0.03). Start with bids slightly below this number and adjust based on what the actual data shows.',
+                'Run ads for at least 7–14 days before evaluating performance. Ad algorithms need data to optimise, and early performance is often unrepresentative of steady-state results. Look at return on ad spend (ROAS): revenue generated divided by ad spend. A ROAS of 4 means you generated $4 of revenue for every $1 of ad spend. Whether that is profitable depends on your gross margin — if your margin is 25%, a ROAS of 4 means you broke even on the ad spend. A ROAS below your gross margin reciprocal means the ads are unprofitable.',
+                'Use search term reports to understand which keywords are driving clicks and which are driving purchases. Many sellers discover that a significant portion of their ad spend goes to keywords that generate clicks but zero purchases — these should be added as negative keywords immediately. Regular negative keyword management often reduces wasted spend by 20–40% without reducing sales, which directly improves ROAS. Check this report weekly in the early stages of a campaign.',
+                'Ads amplify your listing quality, not replace it. A well-funded ad campaign driving traffic to a weak listing — poor photos, thin description, no reviews — will have a low conversion rate that makes the ads unprofitable regardless of how competitive the keywords are. The correct order is always: optimise the listing first, then run ads to amplify what is already converting. Spending on ads before the listing is strong is paying for traffic that your listing then fails to convert.'
+              ],
+              takeaways: [
+                'Calculate your maximum cost per click before setting any bid: contribution margin per unit multiplied by your estimated conversion rate.',
+                'Check your search term report weekly and add non-converting keywords as negatives — this is typically where 20–40% of wasted ad spend hides.',
+                'Optimise your listing fully before running ads; ads amplify what is already working, they do not compensate for a listing that is not converting.'
+              ]
+            },
+            {
+              id: 'social-proof',
+              title: 'Building social proof',
+              why: 'A buyer who has never heard of you is making a trust decision, not just a product decision. Reviews, ratings, and sales counts are the signals that tell a stranger it is safe to buy from you — and they directly affect both ranking and conversion.',
+              content: [
+                'Your first five to ten reviews are disproportionately important. Most buyers filter by minimum star rating and sort by number of reviews — a listing with zero reviews is passed over regardless of how good the product is. The fastest legitimate way to build initial reviews is to message buyers through the platform\'s chat function after confirmed delivery to ask for their feedback. Keep the message short, warm, and non-pressuring: "Hi, we hope your [product] arrived in good condition. If you\'re happy with it, we\'d really appreciate a review — it helps other buyers and means a lot to a small seller." Most platforms allow and encourage this.',
+                'Product quality is the foundation of review quality. A product that does what it says, arrives as described, and is packaged well generates positive reviews with minimal prompting. A product with quality issues generates negative reviews that no amount of follow-up messaging will prevent. The most efficient review strategy is sourcing a product you are genuinely confident in and packaging it carefully — every negative review you avoid is worth more than two positive ones you chase.',
+                'Respond to every review, positive and negative. A response to a positive review shows other buyers you are engaged and appreciative. A calm, helpful response to a negative review shows prospective buyers that problems get handled professionally — which often matters more than the negative review itself. Many buyers read the response to a one-star review more carefully than the review. A defensive or dismissive response amplifies the negative signal; a helpful one can neutralise it.',
+                'Sales count is displayed prominently on both Shopee and Lazada listings and functions as social proof independently of reviews. Buyers interpret high sales counts as evidence that others have trusted the product — the "2,347 sold" indicator is doing real persuasion work. This reinforces the importance of building sales velocity early, not just for algorithmic reasons but for buyer psychology. A listing that shows strong sales will convert better than an identical listing with low sales, even with the same price and photos.',
+                'Proactively manage Q&A sections by answering buyer questions promptly and thoroughly. An unanswered question in the Q&A section signals slow or absent service to every subsequent buyer who reads it. A thorough, friendly answer not only helps the buyer who asked but also provides information to every future visitor. Over time, a well-maintained Q&A section becomes a FAQ that pre-empts common objections and reduces the friction between browse and purchase.'
+              ],
+              takeaways: [
+                'Message buyers through the platform chat after confirmed delivery to ask for a review — a short, warm, non-pressuring message after a good experience converts well.',
+                'Respond to every review including negative ones; a calm, helpful response to a one-star review is read by every subsequent buyer and can neutralise the damage.',
+                'Answer every Q&A question promptly and thoroughly — an unanswered question signals absent service to every future visitor who reads it.'
+              ]
+            }
           ]
         },
         {
