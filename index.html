@@ -2681,6 +2681,7 @@
       selectedId = card.dataset.id;
       localStorage.setItem(STORAGE_KEY, selectedId);
       document.getElementById('btn-continue').disabled = false;
+      showPath();
     }
 
     function restoreSelection() {
@@ -2807,7 +2808,7 @@
       document.getElementById('lesson-title').textContent = topic.title;
 
       const whyEl = document.getElementById('lesson-why');
-      whyEl.textContent = topic.why || 'This lesson connects directly to a real challenge you'll face in your business.';
+      whyEl.textContent = topic.why || 'This lesson connects directly to a real challenge you\'ll face in your business.';
 
       const contentEl = document.getElementById('lesson-content');
       if (topic.content && topic.content.length) {
